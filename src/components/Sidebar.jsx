@@ -4,9 +4,7 @@ export default function Sidebar() {
   return (
     <aside className="fixed left-0 top-0 h-full w-64 bg-surface-container-low z-50 flex flex-col py-6">
       <div className="px-6 mb-8 flex items-center gap-3">
-        <div className="h-8 w-auto flex items-center justify-center">
-          <span className="text-2xl font-bold text-primary">AuraStay</span>
-        </div>
+        <img alt="AuraStay PMS Logo" className="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCy-4nLs9x0eWhWlJeygTrREO7AU62ATzLr8vhurhnG5y91KZbQCtW540gLO6QLQRDGRGvsEyexwyf4G2_kFekaGmJV4IXF95pLpJg7R50SNx1hKv5n30vZhlnZaLza3JpokwwUcLKQ4KEniGpafPNiCpkoKS713GwlU7HfI-BwPwPsdjgQ-y3bhY_3TvZbzP-RXHp9hZtrRn5kHS0CYBUKbhq0wAnSjbOnM8PCf2jijEKXg_eHkjuLeQ" />
         <span className="text-headline-sm font-bold text-primary">AuraStay PMS</span>
       </div>
       <nav className="flex-1 px-4 flex flex-col gap-unit-xs">
