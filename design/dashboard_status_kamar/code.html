@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {"colors": {"surface": "#f5faff", "tertiary-container": "#658fed", "on-tertiary-container": "#002763", "inverse-surface": "#24323a", "on-surface-variant": "#404752", "secondary-fixed": "#cbe6ff", "primary-container": "#2196f3", "surface-container-lowest": "#ffffff", "on-primary-fixed": "#001d36", "surface-container-high": "#dbeaf5", "outline": "#707883", "primary-fixed": "#d1e4ff", "on-secondary": "#ffffff", "on-tertiary": "#ffffff", "on-primary-fixed-variant": "#00497d", "inverse-on-surface": "#e4f3fe", "on-tertiary-fixed": "#001945", "on-primary": "#ffffff", "secondary": "#21638d", "on-primary-container": "#002c4f", "on-background": "#0f1d25", "on-secondary-fixed-variant": "#004b71", "surface-container": "#e1f0fb", "surface-dim": "#cddce7", "primary": "#0061a4", "on-error-container": "#93000a", "secondary-fixed-dim": "#93cdfc", "error-container": "#ffdad6", "error": "#ba1a1a", "surface-container-highest": "#d6e5ef", "on-surface": "#0f1d25", "on-error": "#ffffff", "tertiary-fixed-dim": "#b0c6ff", "tertiary-fixed": "#d9e2ff", "surface-tint": "#0061a4", "surface-container-low": "#e9f5ff", "on-secondary-fixed": "#001e30", "primary-fixed-dim": "#9ecaff", "on-secondary-container": "#105982", "outline-variant": "#bfc7d4", "secondary-container": "#95cfff", "background": "#f5faff", "inverse-primary": "#9ecaff", "on-tertiary-fixed-variant": "#00429c", "surface-bright": "#f5faff", "tertiary": "#2b5bb5", "surface-variant": "#d6e5ef"}, "borderRadius": {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"}, "spacing": {"unit-xs": "0.25rem", "margin-desktop": "2rem", "unit-xxl": "3rem", "unit-md": "1rem", "unit-xl": "2rem", "unit-sm": "0.5rem", "unit-lg": "1.5rem", "grid-columns": "12", "gutter": "1.5rem", "margin-mobile": "1rem"}, "fontFamily": {"headline-sm": ["Inter"], "body-lg": ["Inter"], "label-sm": ["Inter"], "headline-xl": ["Inter"], "body-sm": ["Inter"], "label-md": ["Inter"], "headline-md": ["Inter"], "body-md": ["Inter"], "headline-lg": ["Inter"]}, "fontSize": {"headline-sm": ["16px", {"lineHeight": "24px", "fontWeight": "500"}], "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}], "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}], "headline-xl": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600"}], "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}], "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "500"}], "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "500"}], "headline-lg": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}]}}}};</script><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/></head><body class="bg-surface font-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low z-50 flex flex-col py-6"><div class="px-6 mb-8 flex items-center gap-3"><img alt="AuraStay PMS Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCy-4nLs9x0eWhWlJeygTrREO7AU62ATzLr8vhurhnG5y91KZbQCtW540gLO6QLQRDGRGvsEyexwyf4G2_kFekaGmJV4IXF95pLpJg7R50SNx1hKv5n30vZhlnZaLza3JpokwwUcLKQ4KEniGpafPNiCpkoKS713GwlU7HfI-BwPwPsdjgQ-y3bhY_3TvZbzP-RXHp9hZtrRn5kHS0CYBUKbhq0wAnSjbOnM8PCf2jijEKXg_eHkjuLeQ"/><span class="text-headline-sm font-bold text-primary">AuraStay PMS</span></div><nav class="flex-1 px-4 flex flex-col gap-unit-xs" data-active-classes="bg-primary-container text-on-primary-container font-medium"><a aria-current="page" class="flex items-center px-4 py-3 rounded-xl transition-all bg-primary-container text-on-primary-container font-medium" data-path="dashboard" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">dashboard</span>Status Kamar & Dashboard</a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="front-desk" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">calendar_month</span>Front Desk & Kalender</a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="finance" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">payments</span>Keuangan & Pembayaran</a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="rooms-ota" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">hotel</span>Pengaturan Kamar & OTA</a></nav></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-margin-desktop"><div class="flex items-center gap-unit-md"><span class="material-symbols-outlined text-on-surface-variant">search</span><span class="text-body-md text-on-surface-variant">Cari reservasi, tamu, atau nomor kamar...</span></div><div class="flex items-center gap-unit-md"><button class="p-unit-xs rounded-full hover:bg-surface-container-high text-on-surface-variant"><span class="material-symbols-outlined">notifications</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full p-margin-desktop gap-unit-xl">
+<!-- Top Section: Overview & Metrics -->
+<div class="flex flex-col gap-unit-md">
+<div class="flex justify-between items-end">
+<div>
+<span class="text-label-sm uppercase tracking-wider text-primary font-bold">AuraStay PMS Core</span>
+<h1 class="font-headline-xl text-on-surface">Status Kamar & Dashboard Real-time</h1>
+</div>
+<div class="flex items-center gap-unit-md">
+<button class="flex items-center gap-2 px-4 py-2 bg-surface-container-high rounded-xl text-on-surface hover:bg-surface-container-highest transition-all text-label-md">
+<span class="material-symbols-outlined text-[18px]">refresh</span>
+<span>Sinkronisasi OTA</span>
+</button>
+<button class="flex items-center gap-2 px-4 py-2 bg-primary text-on-primary rounded-xl hover:bg-primary-container transition-all text-label-md shadow-sm">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>Check-in Cepat</span>
+</button>
+</div>
+</div>
+<!-- Metric Cards Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-unit-md">
+<!-- Total Kamar -->
+<div class="bg-surface-container-lowest p-unit-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -right-4 -bottom-4 text-primary/10">
+<span class="material-symbols-outlined text-[96px]">hotel</span>
+</div>
+<div class="flex items-center justify-between z-10">
+<span class="text-label-md text-on-surface-variant font-medium">Total Kamar</span>
+<span class="p-2 bg-primary-fixed text-on-primary-fixed rounded-lg"><span class="material-symbols-outlined text-[20px]">domain</span></span>
+</div>
+<div class="mt-4 z-10">
+<span class="font-headline-xl text-on-surface">128</span>
+<p class="text-body-sm text-on-surface-variant mt-1">Seluruh unit properti</p>
+</div>
+</div>
+<!-- Terisi -->
+<div class="bg-surface-container-lowest p-unit-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -right-4 -bottom-4 text-secondary/10">
+<span class="material-symbols-outlined text-[96px]">vpn_key</span>
+</div>
+<div class="flex items-center justify-between z-10">
+<span class="text-label-md text-on-surface-variant font-medium">Terisi (Occupied)</span>
+<span class="p-2 bg-secondary-fixed text-on-secondary-fixed rounded-lg"><span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">bedroom_parent</span></span>
+</div>
+<div class="mt-4 z-10">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-xl text-on-surface">84</span>
+<span class="text-label-sm text-secondary font-medium">65.6%</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 65.6%;"></div>
+</div>
+</div>
+</div>
+<!-- Kosong -->
+<div class="bg-surface-container-lowest p-unit-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -right-4 -bottom-4 text-emerald-500/10">
+<span class="material-symbols-outlined text-[96px]">check_circle</span>
+</div>
+<div class="flex items-center justify-between z-10">
+<span class="text-label-md text-on-surface-variant font-medium">Kosong (Available)</span>
+<span class="p-2 bg-emerald-100 text-emerald-800 rounded-lg"><span class="material-symbols-outlined text-[20px]">door_front</span></span>
+</div>
+<div class="mt-4 z-10">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-xl text-on-surface">32</span>
+<span class="text-label-sm text-emerald-600 font-medium">Siap Jual</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-emerald-500 h-full rounded-full" style="width: 25%;"></div>
+</div>
+</div>
+</div>
+<!-- Kotor -->
+<div class="bg-surface-container-lowest p-unit-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -right-4 -bottom-4 text-amber-500/10">
+<span class="material-symbols-outlined text-[96px]">cleaning_services</span>
+</div>
+<div class="flex items-center justify-between z-10">
+<span class="text-label-md text-on-surface-variant font-medium">Kotor (Dirty)</span>
+<span class="p-2 bg-amber-100 text-amber-800 rounded-lg"><span class="material-symbols-outlined text-[20px]">mop</span></span>
+</div>
+<div class="mt-4 z-10">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-xl text-on-surface">8</span>
+<span class="text-label-sm text-amber-600 font-medium">Proses Cleaning</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-amber-500 h-full rounded-full" style="width: 6.2%;"></div>
+</div>
+</div>
+</div>
+<!-- Pemeliharaan -->
+<div class="bg-surface-container-lowest p-unit-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -right-4 -bottom-4 text-error/10">
+<span class="material-symbols-outlined text-[96px]">build</span>
+</div>
+<div class="flex items-center justify-between z-10">
+<span class="text-label-md text-on-surface-variant font-medium">Pemeliharaan</span>
+<span class="p-2 bg-error-container text-on-error-container rounded-lg"><span class="material-symbols-outlined text-[20px]">handyman</span></span>
+</div>
+<div class="mt-4 z-10">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-xl text-on-surface">4</span>
+<span class="text-label-sm text-error font-medium">Maintenance</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 3.1%;"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Content Layout: Room Grid & Housekeeping Panel -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-unit-lg">
+<!-- Left Section: Room Status Visual Grid (8 Cols) -->
+<div class="lg:col-span-8 flex flex-col gap-unit-md">
+<div class="bg-surface-container-lowest p-unit-lg rounded-xl shadow-sm flex flex-col gap-unit-md">
+<!-- Filter Bar -->
+<div class="flex flex-wrap items-center justify-between gap-4 pb-4">
+<div class="flex items-center gap-2">
+<h2 class="font-headline-md text-on-surface">Matriks Kamar</h2>
+<span class="px-2.5 py-0.5 bg-surface-container-high text-on-surface-variant rounded-full text-label-sm font-medium">Lantai 1 - 5</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 bg-primary text-on-primary rounded-lg text-label-sm font-medium">Semua</button>
+<button class="px-3 py-1.5 bg-surface-container-high text-on-surface-variant hover:bg-surface-container-highest rounded-lg text-label-sm font-medium transition-all">Deluxe</button>
+<button class="px-3 py-1.5 bg-surface-container-high text-on-surface-variant hover:bg-surface-container-highest rounded-lg text-label-sm font-medium transition-all">Suite</button>
+<button class="px-3 py-1.5 bg-surface-container-high text-on-surface-variant hover:bg-surface-container-highest rounded-lg text-label-sm font-medium transition-all">Superior</button>
+</div>
+</div>
+<!-- Legend -->
+<div class="flex flex-wrap items-center gap-6 py-2 px-3 bg-surface rounded-lg text-label-sm text-on-surface-variant">
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-secondary"></div>
+<span>Terisi</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-emerald-500"></div>
+<span>Kosong / Bersih</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-amber-500"></div>
+<span>Kotor / Cleaning</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-error"></div>
+<span>Maintenance</span>
+</div>
+</div>
+<!-- Room Grid Container -->
+<div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-3 mt-2">
+<!-- Room 101 -->
+<div class="p-3 bg-surface rounded-xl border border-secondary/20 flex flex-col justify-between h-28 relative hover:shadow-md transition-all cursor-pointer group">
+<div class="flex justify-between items-start">
+<span class="font-headline-sm text-on-surface">101</span>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+<div>
+<span class="text-label-sm text-on-surface-variant block">Deluxe King</span>
+<span class="text-body-sm text-secondary font-medium mt-0.5 block truncate">Bpk. Haryanto</span>
+</div>
+<div class="absolute bottom-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-[16px] text-primary">chevron_right</span>
+</div>
+</div>
+<!-- Room 102 -->
+<div class="p-3 bg-surface rounded-xl border border-emerald-500/20 flex flex-col justify-between h-28 relative hover:shadow-md transition-all cursor-pointer group">
+<div class="flex justify-between items-start">
+<span class="font-headline-sm text-on-surface">102</span>
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+</div>
+<div>
+<span class="text-label-sm text-on-surface-variant block">Deluxe Twin</span>
+<span class="text-body-sm text-emerald-600 font-medium mt-0.5 block">Tersedia</span>
+</div>
+</div>
+<!-- Room 103 -->
+<div class="p-3 bg-surface rounded-xl border border-amber-500/20 flex flex-col justify-between h-28 relative hover:shadow-md transition-all cursor-pointer group">
+<div class="flex justify-between items-start">
+<span class="font-headline-sm text-on-surface">103</span>
+<span class="w-2 h-2 rounded-full bg-amber-500"></span>
+</div>
+<div>
+<span class="text-label-sm text-on-surface-variant block">Deluxe King</span>
+<span class="text-body-sm text-amber-600 font-medium mt-0.5 block">Dibersihkan</span>
+</div>
+</div>
+<!-- Room 104 -->
+<div class="p-3 bg-surface rounded-xl border border-secondary/20 flex flex-col justify-between h-28 relative hover:shadow-md transition-all cursor-pointer group">
+<div class="flex justify-between items-start">
+<span class="font-headline-sm text-on-surface">104</span>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+<div>
+<span class="text-label-sm text-on-surface-variant block">Superior</span>
+<span class="text-body-sm text-secondary font-medium mt-0.5 block truncate">Ibu Siska</span>
+</div>
+</div>
+<!-- Room 105 -->
+<div class="p-3 bg-surface rounded-xl border border-error/20 flex flex-col justify-between h-28 relative hover:shadow-md transition-all cursor-pointer group">
+<div class="flex justify-between items-start">
+<span class="font-headline-sm text-on-surface">105</span>
+<span class="w-2 h-2 rounded-full bg-error"></span>
+</div>
+<div>
+<span class="text-label-sm text-on-surface-variant block">Suite Room</span>
+<span class="text-body-sm text-error font-medium mt-0.5 block">Perbaikan AC</span>
+</div>
+</div>
+<!-- Room 106 -->
+<div class="p-3 bg-surface rounded-xl border border-emerald-500/20 flex flex-col justify-between h-28 relative hover:shadow-md transition-all cursor-pointer group">
+<div class="flex justify-between items-start">
+<span class="font-headline-sm text-on-surface">106</span>
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+</div>
+<div>
+<span class="text-label-sm text-on-surface-variant block">Deluxe King</span>
+<span class="text-body-sm text-emerald-600 font-medium mt-0.5 block">Tersedia</span>
+</div>
+</div>
+<!-- Room 201 -->
+<div class="p-3 bg-surface rounded-xl border border-secondary/20 flex flex-col justify-between h-28 relative hover:shadow-md transition-all cursor-pointer group">
+<div class="flex justify-between items-start">
+<span class="font-headline-sm text-on-surface">201</span>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+<div>
+<span class="text-label-sm text-on-surface-variant block">Executive Suite</span>
+<span class="text-body-sm text-secondary font-medium mt-0.5 block truncate">Mr. David Smith</span>
+</div>
+</div>
+<!-- Room 202 -->
+<div class="p-3 bg-surface rounded-xl border border-secondary/20 flex flex-col justify-between h-28 relative hover:shadow-md transition-all cursor-pointer group">
+<div class="flex justify-between items-start">
+<span class="font-headline-sm text-on-surface">202</span>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+<div>
+<span class="text-label-sm text-on-surface-variant block">Deluxe Twin</span>
+<span class="text-body-sm text-secondary font-medium mt-0.5 block truncate">Dr. Rahmat</span>
+</div>
+</div>
+<!-- Room 203 -->
+<div class="p-3 bg-surface rounded-xl border border-amber-500/20 flex flex-col justify-between h-28 relative hover:shadow-md transition-all cursor-pointer group">
+<div class="flex justify-between items-start">
+<span class="font-headline-sm text-on-surface">203</span>
+<span class="w-2 h-2 rounded-full bg-amber-500"></span>
+</div>
+<div>
+<span class="text-label-sm text-on-surface-variant block">Deluxe King</span>
+<span class="text-body-sm text-amber-600 font-medium mt-0.5 block">Check-out 12:00</span>
+</div>
+</div>
+<!-- Room 204 -->
+<div class="p-3 bg-surface rounded-xl border border-emerald-500/20 flex flex-col justify-between h-28 relative hover:shadow-md transition-all cursor-pointer group">
+<div class="flex justify-between items-start">
+<span class="font-headline-sm text-on-surface">204</span>
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+</div>
+<div>
+<span class="text-label-sm text-on-surface-variant block">Superior</span>
+<span class="text-body-sm text-emerald-600 font-medium mt-0.5 block">Tersedia</span>
+</div>
+</div>
+<!-- Room 205 -->
+<div class="p-3 bg-surface rounded-xl border border-emerald-500/20 flex flex-col justify-between h-28 relative hover:shadow-md transition-all cursor-pointer group">
+<div class="flex justify-between items-start">
+<span class="font-headline-sm text-on-surface">205</span>
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+</div>
+<div>
+<span class="text-label-sm text-on-surface-variant block">Deluxe King</span>
+<span class="text-body-sm text-emerald-600 font-medium mt-0.5 block">Tersedia</span>
+</div>
+</div>
+<!-- Room 206 -->
+<div class="p-3 bg-surface rounded-xl border border-secondary/20 flex flex-col justify-between h-28 relative hover:shadow-md transition-all cursor-pointer group">
+<div class="flex justify-between items-start">
+<span class="font-headline-sm text-on-surface">206</span>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+<div>
+<span class="text-label-sm text-on-surface-variant block">Suite Room</span>
+<span class="text-body-sm text-secondary font-medium mt-0.5 block truncate">Kel. Wijaya</span>
+</div>
+</div>
+<!-- Room 301 -->
+<div class="p-3 bg-surface rounded-xl border border-secondary/20 flex flex-col justify-between h-28 relative hover:shadow-md transition-all cursor-pointer group">
+<div class="flex justify-between items-start">
+<span class="font-headline-sm text-on-surface">301</span>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+<div>
+<span class="text-label-sm text-on-surface-variant block">Penthouse</span>
+<span class="text-body-sm text-secondary font-medium mt-0.5 block truncate">Mr. Alexander</span>
+</div>
+</div>
+<!-- Room 302 -->
+<div class="p-3 bg-surface rounded-xl border border-amber-500/20 flex flex-col justify-between h-28 relative hover:shadow-md transition-all cursor-pointer group">
+<div class="flex justify-between items-start">
+<span class="font-headline-sm text-on-surface">302</span>
+<span class="w-2 h-2 rounded-full bg-amber-500"></span>
+</div>
+<div>
+<span class="text-label-sm text-on-surface-variant block">Executive Suite</span>
+<span class="text-body-sm text-amber-600 font-medium mt-0.5 block">Inspeksi</span>
+</div>
+</div>
+<!-- Room 303 -->
+<div class="p-3 bg-surface rounded-xl border border-emerald-500/20 flex flex-col justify-between h-28 relative hover:shadow-md transition-all cursor-pointer group">
+<div class="flex justify-between items-start">
+<span class="font-headline-sm text-on-surface">303</span>
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+</div>
+<div>
+<span class="text-label-sm text-on-surface-variant block">Deluxe Twin</span>
+<span class="text-body-sm text-emerald-600 font-medium mt-0.5 block">Tersedia</span>
+</div>
+</div>
+<!-- Room 304 -->
+<div class="p-3 bg-surface rounded-xl border border-secondary/20 flex flex-col justify-between h-28 relative hover:shadow-md transition-all cursor-pointer group">
+<div class="flex justify-between items-start">
+<span class="font-headline-sm text-on-surface">304</span>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+<div>
+<span class="text-label-sm text-on-surface-variant block">Deluxe King</span>
+<span class="text-body-sm text-secondary font-medium mt-0.5 block truncate">Ibu Lestari</span>
+</div>
+</div>
+<!-- Room 305 -->
+<div class="p-3 bg-surface rounded-xl border border-secondary/20 flex flex-col justify-between h-28 relative hover:shadow-md transition-all cursor-pointer group">
+<div class="flex justify-between items-start">
+<span class="font-headline-sm text-on-surface">305</span>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+<div>
+<span class="text-label-sm text-on-surface-variant block">Deluxe King</span>
+<span class="text-body-sm text-secondary font-medium mt-0.5 block truncate">Mr. John Doe</span>
+</div>
+</div>
+<!-- Room 306 -->
+<div class="p-3 bg-surface rounded-xl border border-emerald-500/20 flex flex-col justify-between h-28 relative hover:shadow-md transition-all cursor-pointer group">
+<div class="flex justify-between items-start">
+<span class="font-headline-sm text-on-surface">306</span>
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+</div>
+<div>
+<span class="text-label-sm text-on-surface-variant block">Suite Room</span>
+<span class="text-body-sm text-emerald-600 font-medium mt-0.5 block">Tersedia</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Section: Housekeeping & Live Updates (4 Cols) -->
+<div class="lg:col-span-4 flex flex-col gap-unit-md">
+<!-- Housekeeping Assignment List -->
+<div class="bg-surface-container-lowest p-unit-lg rounded-xl shadow-sm flex flex-col gap-unit-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">cleaning_services</span>
+<h2 class="font-headline-md text-on-surface">Tugas Housekeeping</h2>
+</div>
+<span class="px-2 py-0.5 bg-amber-100 text-amber-800 rounded-full text-label-sm font-medium">8 Pending</span>
+</div>
+<div class="flex flex-col gap-3 mt-1">
+<!-- Task 1 -->
+<div class="p-3 bg-surface rounded-xl flex flex-col gap-2">
+<div class="flex justify-between items-start">
+<div>
+<span class="font-headline-sm text-on-surface">Kamar 103</span>
+<span class="text-body-sm text-on-surface-variant block">Check-out baru • Deluxe King</span>
+</div>
+<span class="px-2 py-1 bg-amber-100 text-amber-800 rounded-lg text-label-sm font-medium">Dibersihkan</span>
+</div>
+<div class="flex items-center justify-between pt-2 border-t border-surface-container-high text-body-sm">
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">person</span>
+<span>Siti Aminah</span>
+</div>
+<button class="text-primary font-medium hover:underline text-label-md">Selesai</button>
+</div>
+</div>
+<!-- Task 2 -->
+<div class="p-3 bg-surface rounded-xl flex flex-col gap-2">
+<div class="flex justify-between items-start">
+<div>
+<span class="font-headline-sm text-on-surface">Kamar 203</span>
+<span class="text-body-sm text-on-surface-variant block">Persiapan Tamu VIP • Deluxe King</span>
+</div>
+<span class="px-2 py-1 bg-amber-100 text-amber-800 rounded-lg text-label-sm font-medium">Proses</span>
+</div>
+<div class="flex items-center justify-between pt-2 border-t border-surface-container-high text-body-sm">
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">person</span>
+<span>Budi Santoso</span>
+</div>
+<button class="text-primary font-medium hover:underline text-label-md">Selesai</button>
+</div>
+</div>
+<!-- Task 3 -->
+<div class="p-3 bg-surface rounded-xl flex flex-col gap-2">
+<div class="flex justify-between items-start">
+<div>
+<span class="font-headline-sm text-on-surface">Kamar 302</span>
+<span class="text-body-sm text-on-surface-variant block">Inspeksi Berkala • Exec Suite</span>
+</div>
+<span class="px-2 py-1 bg-secondary-fixed text-on-secondary-fixed rounded-lg text-label-sm font-medium">Inspeksi</span>
+</div>
+<div class="flex items-center justify-between pt-2 border-t border-surface-container-high text-body-sm">
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">person</span>
+<span>Dewi Lestari</span>
+</div>
+<button class="text-primary font-medium hover:underline text-label-md">Verifikasi</button>
+</div>
+</div>
+</div>
+<button class="w-full py-2.5 bg-surface-container-high text-on-surface rounded-xl hover:bg-surface-container-highest transition-all text-label-md font-medium mt-2">
+          Lihat Semua Tugas (8)
+        </button>
+</div>
+<!-- Quick Action / Operational Shortcuts -->
+<div class="bg-surface-container-lowest p-unit-lg rounded-xl shadow-sm flex flex-col gap-unit-md">
+<h2 class="font-headline-md text-on-surface">Aksi Cepat Front Desk</h2>
+<div class="grid grid-cols-2 gap-3">
+<button class="p-3 bg-surface rounded-xl hover:bg-surface-container-high transition-all flex flex-col items-center text-center gap-2 group">
+<span class="p-2.5 bg-primary-fixed text-on-primary-fixed rounded-xl group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[20px]">how_to_reg</span>
+</span>
+<span class="text-label-md font-medium text-on-surface">Check-in Tamu</span>
+</button>
+<button class="p-3 bg-surface rounded-xl hover:bg-surface-container-high transition-all flex flex-col items-center text-center gap-2 group">
+<span class="p-2.5 bg-secondary-fixed text-on-secondary-fixed rounded-xl group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[20px]">logout</span>
+</span>
+<span class="text-label-md font-medium text-on-surface">Check-out & Bill</span>
+</button>
+<button class="p-3 bg-surface rounded-xl hover:bg-surface-container-high transition-all flex flex-col items-center text-center gap-2 group">
+<span class="p-2.5 bg-amber-100 text-amber-800 rounded-xl group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[20px]">swap_horiz</span>
+</span>
+<span class="text-label-md font-medium text-on-surface">Pindah Kamar</span>
+</button>
+<button class="p-3 bg-surface rounded-xl hover:bg-surface-container-high transition-all flex flex-col items-center text-center gap-2 group">
+<span class="p-2.5 bg-error-container text-on-error-container rounded-xl group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[20px]">report_problem</span>
+</span>
+<span class="text-label-md font-medium text-on-surface">Lapor Kerusakan</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

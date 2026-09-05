@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {"colors": {"surface": "#f5faff", "tertiary-container": "#658fed", "on-tertiary-container": "#002763", "inverse-surface": "#24323a", "on-surface-variant": "#404752", "secondary-fixed": "#cbe6ff", "primary-container": "#2196f3", "surface-container-lowest": "#ffffff", "on-primary-fixed": "#001d36", "surface-container-high": "#dbeaf5", "outline": "#707883", "primary-fixed": "#d1e4ff", "on-secondary": "#ffffff", "on-tertiary": "#ffffff", "on-primary-fixed-variant": "#00497d", "inverse-on-surface": "#e4f3fe", "on-tertiary-fixed": "#001945", "on-primary": "#ffffff", "secondary": "#21638d", "on-primary-container": "#002c4f", "on-background": "#0f1d25", "on-secondary-fixed-variant": "#004b71", "surface-container": "#e1f0fb", "surface-dim": "#cddce7", "primary": "#0061a4", "on-error-container": "#93000a", "secondary-fixed-dim": "#93cdfc", "error-container": "#ffdad6", "error": "#ba1a1a", "surface-container-highest": "#d6e5ef", "on-surface": "#0f1d25", "on-error": "#ffffff", "tertiary-fixed-dim": "#b0c6ff", "tertiary-fixed": "#d9e2ff", "surface-tint": "#0061a4", "surface-container-low": "#e9f5ff", "on-secondary-fixed": "#001e30", "primary-fixed-dim": "#9ecaff", "on-secondary-container": "#105982", "outline-variant": "#bfc7d4", "secondary-container": "#95cfff", "background": "#f5faff", "inverse-primary": "#9ecaff", "on-tertiary-fixed-variant": "#00429c", "surface-bright": "#f5faff", "tertiary": "#2b5bb5", "surface-variant": "#d6e5ef"}, "borderRadius": {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"}, "spacing": {"unit-xs": "0.25rem", "margin-desktop": "2rem", "unit-xxl": "3rem", "unit-md": "1rem", "unit-xl": "2rem", "unit-sm": "0.5rem", "unit-lg": "1.5rem", "grid-columns": "12", "gutter": "1.5rem", "margin-mobile": "1rem"}, "fontFamily": {"headline-sm": ["Inter"], "body-lg": ["Inter"], "label-sm": ["Inter"], "headline-xl": ["Inter"], "body-sm": ["Inter"], "label-md": ["Inter"], "headline-md": ["Inter"], "body-md": ["Inter"], "headline-lg": ["Inter"]}, "fontSize": {"headline-sm": ["16px", {"lineHeight": "24px", "fontWeight": "500"}], "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}], "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}], "headline-xl": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600"}], "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}], "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "500"}], "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "500"}], "headline-lg": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}]}}}};</script><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/></head><body class="bg-surface font-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low z-50 flex flex-col py-6"><div class="px-6 mb-8 flex items-center gap-3"><img alt="AuraStay PMS Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCy-4nLs9x0eWhWlJeygTrREO7AU62ATzLr8vhurhnG5y91KZbQCtW540gLO6QLQRDGRGvsEyexwyf4G2_kFekaGmJV4IXF95pLpJg7R50SNx1hKv5n30vZhlnZaLza3JpokwwUcLKQ4KEniGpafPNiCpkoKS713GwlU7HfI-BwPwPsdjgQ-y3bhY_3TvZbzP-RXHp9hZtrRn5kHS0CYBUKbhq0wAnSjbOnM8PCf2jijEKXg_eHkjuLeQ"/><span class="text-headline-sm font-bold text-primary">AuraStay PMS</span></div><nav class="flex-1 px-4 flex flex-col gap-unit-xs" data-active-classes="bg-primary-container text-on-primary-container font-medium"><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">dashboard</span>Status Kamar & Dashboard</a><a aria-current="page" class="flex items-center px-4 py-3 rounded-xl transition-all bg-primary-container text-on-primary-container font-medium" data-path="front-desk" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">calendar_month</span>Front Desk & Kalender</a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="finance" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">payments</span>Keuangan & Pembayaran</a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="rooms-ota" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">hotel</span>Pengaturan Kamar & OTA</a></nav></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-margin-desktop"><div class="flex items-center gap-unit-md"><span class="material-symbols-outlined text-on-surface-variant">search</span><span class="text-body-md text-on-surface-variant">Cari reservasi, tamu, atau nomor kamar...</span></div><div class="flex items-center gap-unit-md"><button class="p-unit-xs rounded-full hover:bg-surface-container-high text-on-surface-variant"><span class="material-symbols-outlined">notifications</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full pb-16">
+<!-- Top Bar / Quick Stats Row -->
+<div class="px-margin-desktop pt-margin-desktop mb-8">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+<div>
+<h1 class="font-headline-xl text-on-surface">Front Desk & Kalender Reservasi</h1>
+<p class="font-body-md text-on-surface-variant">Kelola ketersediaan kamar, check-in tamu, dan riwayat CRM secara real-time.</p>
+</div>
+<div class="flex items-center gap-3">
+<button class="bg-surface-container-high hover:bg-surface-dim text-on-surface px-4 py-2.5 rounded-xl font-label-md flex items-center gap-2 transition-all shadow-sm">
+<span class="material-symbols-outlined text-[18px]">filter_list</span> Filter Kamar
+        </button>
+<button class="bg-primary hover:bg-[#00497d] text-on-primary px-4 py-2.5 rounded-xl font-label-md flex items-center gap-2 transition-all shadow-md">
+<span class="material-symbols-outlined text-[18px]">add</span> Reservasi Baru
+        </button>
+</div>
+</div>
+<!-- Quick Metric Cards (Bento style grid) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm relative overflow-hidden group">
+<div class="absolute right-0 top-0 w-24 h-24 bg-primary/5 rounded-bl-full transition-transform group-hover:scale-110"></div>
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-sm uppercase tracking-wider text-on-surface-variant">Tingkat Okupansi</span>
+<span class="p-2 rounded-xl bg-primary-fixed text-on-primary-fixed material-symbols-outlined text-[20px]">hotel</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-on-surface">84.2%</span>
+<span class="text-xs font-medium text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded">+4.5% vs kemarin</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-4 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 84.2%"></div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm relative overflow-hidden group">
+<div class="absolute right-0 top-0 w-24 h-24 bg-tertiary/5 rounded-bl-full transition-transform group-hover:scale-110"></div>
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-sm uppercase tracking-wider text-on-surface-variant">Check-In Hari Ini</span>
+<span class="p-2 rounded-xl bg-tertiary-fixed text-on-tertiary-fixed material-symbols-outlined text-[20px]">login</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-on-surface">18</span>
+<span class="text-xs font-medium text-primary bg-primary-fixed px-1.5 py-0.5 rounded">12 Selesai</span>
+</div>
+<p class="text-xs text-on-surface-variant mt-4">6 tamu dijadwalkan sore ini</p>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm relative overflow-hidden group">
+<div class="absolute right-0 top-0 w-24 h-24 bg-secondary-fixed/30 rounded-bl-full transition-transform group-hover:scale-110"></div>
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-sm uppercase tracking-wider text-on-surface-variant">Check-Out Hari Ini</span>
+<span class="p-2 rounded-xl bg-secondary-fixed text-on-secondary-fixed material-symbols-outlined text-[20px]">logout</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-on-surface">14</span>
+<span class="text-xs font-medium text-amber-600 bg-amber-50 px-1.5 py-0.5 rounded">3 Pending Housekeeping</span>
+</div>
+<p class="text-xs text-on-surface-variant mt-4">Pembersihan kamar aktif</p>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm relative overflow-hidden group">
+<div class="absolute right-0 top-0 w-24 h-24 bg-primary/5 rounded-bl-full transition-transform group-hover:scale-110"></div>
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-sm uppercase tracking-wider text-on-surface-variant">Pendapatan Harian</span>
+<span class="p-2 rounded-xl bg-primary-fixed text-on-primary-fixed material-symbols-outlined text-[20px]">payments</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-on-surface">Rp 28.4 Jt</span>
+<span class="text-xs font-medium text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded">ADR Rp 1.6M</span>
+</div>
+<p class="text-xs text-on-surface-variant mt-4">Termasuk F&B dan Layanan</p>
+</div>
+</div>
+</div>
+<!-- Interactive Timeline / Calendar Grid Section -->
+<div class="px-margin-desktop mb-8">
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm">
+<div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 mb-6">
+<div class="flex items-center gap-4">
+<h2 class="font-headline-md text-on-surface">Kalendar Reservasi & Kamar</h2>
+<div class="flex items-center bg-surface-container-high rounded-lg p-1">
+<button class="px-3 py-1 bg-surface-container-lowest text-on-surface rounded font-label-sm shadow-sm">Hari Ini</button>
+<button class="px-3 py-1 text-on-surface-variant hover:text-on-surface rounded font-label-sm">Minggu</button>
+<button class="px-3 py-1 text-on-surface-variant hover:text-on-surface rounded font-label-sm">Bulan</button>
+</div>
+</div>
+<div class="flex items-center gap-3 w-full lg:w-auto justify-between lg:justify-end">
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-lg bg-surface-container-high hover:bg-surface-dim text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<span class="font-headline-sm text-on-surface px-2">14 - 20 Oktober 2023</span>
+<button class="p-2 rounded-lg bg-surface-container-high hover:bg-surface-dim text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+<div class="flex items-center gap-2 text-xs text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="w-3 h-3 rounded-full bg-primary inline-block"></span> Terisi</span>
+<span class="flex items-center gap-1"><span class="w-3 h-3 rounded-full bg-secondary-fixed inline-block"></span> VIP</span>
+<span class="flex items-center gap-1"><span class="w-3 h-3 rounded-full bg-surface-container-high inline-block"></span> Kosong</span>
+</div>
+</div>
+</div>
+<!-- Calendar Matrix Table Simulation -->
+<div class="overflow-x-auto pb-2">
+<div class="min-w-[900px]">
+<!-- Header row with dates -->
+<div class="grid grid-cols-8 gap-2 mb-3 pb-3 border-b border-surface-container-high">
+<div class="font-label-md text-on-surface-variant">Tipe Kamar</div>
+<div class="text-center font-label-md text-on-surface">Sen, 14 Okt</div>
+<div class="text-center font-label-md text-on-surface">Sel, 15 Okt</div>
+<div class="text-center font-label-md text-on-surface">Rab, 16 Okt</div>
+<div class="text-center font-label-md text-on-surface">Kam, 17 Okt</div>
+<div class="text-center font-label-md text-on-surface">Jum, 18 Okt</div>
+<div class="text-center font-label-md text-on-surface">Sab, 19 Okt</div>
+<div class="text-center font-label-md text-on-surface">Min, 20 Okt</div>
+</div>
+<!-- Room Rows -->
+<div class="space-y-3">
+<!-- Deluxe Ocean View -->
+<div class="grid grid-cols-8 gap-2 items-center py-2 bg-surface-container-low rounded-xl px-3">
+<div class="flex flex-col">
+<span class="font-headline-sm text-on-surface">Deluxe Ocean (101)</span>
+<span class="text-xs text-on-surface-variant">Double Bed • Sea View</span>
+</div>
+<div class="col-span-3 bg-primary text-on-primary rounded-lg p-2 text-xs font-medium flex items-center justify-between shadow-sm relative group cursor-pointer">
+<span class="truncate">Mr. Alexander Vance (VIP)</span>
+<span class="material-symbols-outlined text-[14px]">more_vert</span>
+</div>
+<div class="col-span-2 bg-secondary-fixed text-on-secondary-fixed rounded-lg p-2 text-xs font-medium flex items-center justify-between shadow-sm relative group cursor-pointer">
+<span class="truncate">Siti Rahma (OTA)</span>
+<span class="material-symbols-outlined text-[14px]">more_vert</span>
+</div>
+<div class="col-span-2 bg-surface-container-high rounded-lg p-2 text-xs text-center text-on-surface-variant">
+                Tersedia
+              </div>
+</div>
+<!-- Executive Suite -->
+<div class="grid grid-cols-8 gap-2 items-center py-2 bg-surface-container-low rounded-xl px-3">
+<div class="flex flex-col">
+<span class="font-headline-sm text-on-surface">Exec Suite (205)</span>
+<span class="text-xs text-on-surface-variant">King Bed • Balcony</span>
+</div>
+<div class="col-span-4 bg-tertiary-container text-on-tertiary-container rounded-lg p-2 text-xs font-medium flex items-center justify-between shadow-sm relative group cursor-pointer">
+<span class="truncate">Dr. Jonathan Harker (Direct)</span>
+<span class="material-symbols-outlined text-[14px]">more_vert</span>
+</div>
+<div class="col-span-3 bg-surface-container-high rounded-lg p-2 text-xs text-center text-on-surface-variant">
+                Tersedia
+              </div>
+</div>
+<!-- Superior Twin -->
+<div class="grid grid-cols-8 gap-2 items-center py-2 bg-surface-container-low rounded-xl px-3">
+<div class="flex flex-col">
+<span class="font-headline-sm text-on-surface">Superior Twin (302)</span>
+<span class="text-xs text-on-surface-variant">2 Single Beds • City View</span>
+</div>
+<div class="col-span-2 bg-surface-container-high rounded-lg p-2 text-xs text-center text-on-surface-variant">
+                Tersedia
+              </div>
+<div class="col-span-5 bg-primary text-on-primary rounded-lg p-2 text-xs font-medium flex items-center justify-between shadow-sm relative group cursor-pointer">
+<span class="truncate">Family Group Booking (Budi Santoso)</span>
+<span class="material-symbols-outlined text-[14px]">more_vert</span>
+</div>
+</div>
+<!-- Penthouse Royal -->
+<div class="grid grid-cols-8 gap-2 items-center py-2 bg-surface-container-low rounded-xl px-3">
+<div class="flex flex-col">
+<span class="font-headline-sm text-on-surface">Penthouse (501)</span>
+<span class="text-xs text-on-surface-variant">Private Pool • Butler</span>
+</div>
+<div class="col-span-7 bg-secondary-fixed text-on-secondary-fixed rounded-lg p-2 text-xs font-medium flex items-center justify-between shadow-sm relative group cursor-pointer">
+<span class="truncate">CEO Delegation - TechCorp (Weekly)</span>
+<span class="material-symbols-outlined text-[14px]">more_vert</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Two-Column Layout: Direct Reservation Summary & Guest CRM Quick Lookup -->
+<div class="px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- Booking Engine Direct Reservation Summary (5 cols) -->
+<div class="lg:col-span-5 bg-surface-container-lowest rounded-xl p-6 shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<h3 class="font-headline-md text-on-surface">Ringkasan Mesin Pemesanan Langsung</h3>
+<span class="bg-primary-fixed text-on-primary-fixed text-xs font-medium px-2.5 py-1 rounded-full">Live Widget</span>
+</div>
+<p class="text-body-sm text-on-surface-variant mb-6">Analisis instan dari sumber konversi direct booking website hotel dalam 24 jam terakhir.</p>
+<!-- Funnel metrics -->
+<div class="space-y-4 mb-6">
+<div class="bg-surface-container-low p-4 rounded-xl">
+<div class="flex justify-between text-sm mb-1">
+<span class="text-on-surface-variant">Kunjungan Website</span>
+<span class="font-bold text-on-surface">1,420 Sesi</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 100%"></div>
+</div>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl">
+<div class="flex justify-between text-sm mb-1">
+<span class="text-on-surface-variant">Pencarian Kamar Tanggal Tersedia</span>
+<span class="font-bold text-on-surface">480 Pencarian</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 65%"></div>
+</div>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl">
+<div class="flex justify-between text-sm mb-1">
+<span class="text-on-surface-variant">Konversi Checkout Berhasil</span>
+<span class="font-bold text-emerald-600">34 Reservasi (Conversion 7.1%)</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-emerald-500 h-full rounded-full" style="width: 25%"></div>
+</div>
+</div>
+</div>
+<div class="bg-primary/5 p-4 rounded-xl border border-primary/10 flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">lightbulb</span>
+<div class="text-xs text-on-surface-variant">
+<strong class="text-on-surface block mb-1">Rekomendasi Pendapatan Otomatis:</strong>
+            Lonjakan pencarian untuk akhir pekan depan. Disarankan menaikkan tarif kamar Deluxe sebesar 12% untuk mengoptimalkan RevPAR.
+          </div>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-surface-container-high flex justify-between items-center">
+<span class="text-xs text-on-surface-variant">Sinkronisasi OTA Terakhir: 2 menit lalu</span>
+<button class="text-primary font-label-md hover:underline flex items-center gap-1">
+          Kelola Channel Manager <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Guest CRM Quick Lookup Table (7 cols) -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-xl p-6 shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6">
+<h3 class="font-headline-md text-on-surface">Pencarian Cepat Guest CRM & Preferensi</h3>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-on-surface-variant text-[18px]">search</span>
+<input class="bg-surface-container-low pl-9 pr-4 py-2 rounded-xl text-xs text-on-surface outline-none w-full sm:w-64 focus:ring-2 focus:ring-primary/20" placeholder="Cari nama tamu, email, telp..." type="text"/>
+</div>
+</div>
+<!-- CRM Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-surface-container-high text-xs text-on-surface-variant">
+<th class="py-3 font-medium">Nama Tamu & Status</th>
+<th class="py-3 font-medium">Riwayat Kunjungan</th>
+<th class="py-3 font-medium">Preferensi Kamar</th>
+<th class="py-3 font-medium text-right">Aksi</th>
+</tr>
+</thead>
+<tbody class="text-sm divide-y divide-surface-container-low">
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-primary-fixed text-on-primary-fixed font-bold flex items-center justify-center text-xs">AV</div>
+<div>
+<div class="font-headline-sm text-on-surface">Alexander Vance</div>
+<span class="text-xs text-primary font-medium">VIP Platinum Member</span>
+</div>
+</div>
+</td>
+<td class="py-3">
+<div class="text-xs text-on-surface">14 Kali Menginap</div>
+<span class="text-xs text-on-surface-variant">Total Spend: Rp 84.5 Jt</span>
+</td>
+<td class="py-3">
+<div class="flex flex-wrap gap-1">
+<span class="bg-surface-container-high text-on-surface-variant text-xs px-2 py-0.5 rounded">High Floor</span>
+<span class="bg-surface-container-high text-on-surface-variant text-xs px-2 py-0.5 rounded">Extra Pillow</span>
+</div>
+</td>
+<td class="py-3 text-right">
+<button class="p-1.5 rounded-lg hover:bg-surface-container-high text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-secondary-fixed text-on-secondary-fixed font-bold flex items-center justify-center text-xs">SR</div>
+<div>
+<div class="font-headline-sm text-on-surface">Siti Rahma</div>
+<span class="text-xs text-on-surface-variant">Regular Guest</span>
+</div>
+</div>
+</td>
+<td class="py-3">
+<div class="text-xs text-on-surface">3 Kali Menginap</div>
+<span class="text-xs text-on-surface-variant">Total Spend: Rp 12.1 Jt</span>
+</td>
+<td class="py-3">
+<div class="flex flex-wrap gap-1">
+<span class="bg-surface-container-high text-on-surface-variant text-xs px-2 py-0.5 rounded">Non-Smoking</span>
+<span class="bg-surface-container-high text-on-surface-variant text-xs px-2 py-0.5 rounded">Twin Bed</span>
+</div>
+</td>
+<td class="py-3 text-right">
+<button class="p-1.5 rounded-lg hover:bg-surface-container-high text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-bold flex items-center justify-center text-xs">JH</div>
+<div>
+<div class="font-headline-sm text-on-surface">Dr. Jonathan Harker</div>
+<span class="text-xs text-tertiary font-medium">Corporate Partner</span>
+</div>
+</div>
+</td>
+<td class="py-3">
+<div class="text-xs text-on-surface">8 Kali Menginap</div>
+<span class="text-xs text-on-surface-variant">Total Spend: Rp 45.0 Jt</span>
+</td>
+<td class="py-3">
+<div class="flex flex-wrap gap-1">
+<span class="bg-surface-container-high text-on-surface-variant text-xs px-2 py-0.5 rounded">Quiet Room</span>
+<span class="bg-surface-container-high text-on-surface-variant text-xs px-2 py-0.5 rounded">Late Checkout</span>
+</div>
+</td>
+<td class="py-3 text-right">
+<button class="p-1.5 rounded-lg hover:bg-surface-container-high text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-surface-container-high flex justify-between items-center">
+<span class="text-xs text-on-surface-variant">Menampilkan 3 dari 1,240 Total Database Tamu</span>
+<button class="text-primary font-label-md hover:underline flex items-center gap-1">
+          Buka Modul CRM Lengkap <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Ambient Photo Showcase Strip to enhance visual richness -->
+<div class="px-margin-desktop mt-8">
+<div class="relative rounded-xl overflow-hidden p-8 bg-cover bg-center min-h-[220px] flex flex-col justify-end shadow-md" data-alt="A luxurious hotel lobby with modern lighting, polished marble floors, comfortable seating arrangements, and welcoming front desk staff assisting guests in a calm, professional atmosphere with soft blue tones matching AuraStay PMS theme." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCBtTctJ8S0fVm8ii7Rti8JwffSX4WbqwjpDPgR_d_SuG2iQSaYIzBI5xkSBIAbIYudI10pTldcfiKHCukejPJCMvXXyorEPmLdVU42MVN-he7NoR0iKT1lwh4hmeI__eckjpN7OzgAJlGxBlTRcmmCjK0GxnQhW6ojkcwx9zA3MuYlX28QIrBQn3sCugghtek3EuOKuUMbq8Uv47bGtkBMTPohyVSD8wWpNghDDGORf7BanibJxgPMbw')">
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/90 via-inverse-surface/40 to-transparent"></div>
+<div class="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div>
+<span class="text-xs font-semibold text-secondary-fixed uppercase tracking-wider bg-primary/40 px-2.5 py-1 rounded-full mb-2 inline-block">AuraStay Operations Suite</span>
+<h3 class="font-headline-lg text-inverse-on-surface">Standar Pelayanan Prima & Otomasi Resepsionis</h3>
+<p class="text-body-sm text-inverse-on-surface/80 max-w-xl">Kurangi waktu tunggu tamu hingga 75% melalui integrasi fast check-in kiosk dan manajemen kunci digital seluler.</p>
+</div>
+<button class="bg-primary text-on-primary hover:bg-[#00497d] px-5 py-3 rounded-xl font-label-md transition-all shadow-lg whitespace-nowrap">
+          Panduan Operasional Shift
+        </button>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

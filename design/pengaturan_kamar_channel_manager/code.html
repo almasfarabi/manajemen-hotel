@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {"colors": {"surface": "#f5faff", "tertiary-container": "#658fed", "on-tertiary-container": "#002763", "inverse-surface": "#24323a", "on-surface-variant": "#404752", "secondary-fixed": "#cbe6ff", "primary-container": "#2196f3", "surface-container-lowest": "#ffffff", "on-primary-fixed": "#001d36", "surface-container-high": "#dbeaf5", "outline": "#707883", "primary-fixed": "#d1e4ff", "on-secondary": "#ffffff", "on-tertiary": "#ffffff", "on-primary-fixed-variant": "#00497d", "inverse-on-surface": "#e4f3fe", "on-tertiary-fixed": "#001945", "on-primary": "#ffffff", "secondary": "#21638d", "on-primary-container": "#002c4f", "on-background": "#0f1d25", "on-secondary-fixed-variant": "#004b71", "surface-container": "#e1f0fb", "surface-dim": "#cddce7", "primary": "#0061a4", "on-error-container": "#93000a", "secondary-fixed-dim": "#93cdfc", "error-container": "#ffdad6", "error": "#ba1a1a", "surface-container-highest": "#d6e5ef", "on-surface": "#0f1d25", "on-error": "#ffffff", "tertiary-fixed-dim": "#b0c6ff", "tertiary-fixed": "#d9e2ff", "surface-tint": "#0061a4", "surface-container-low": "#e9f5ff", "on-secondary-fixed": "#001e30", "primary-fixed-dim": "#9ecaff", "on-secondary-container": "#105982", "outline-variant": "#bfc7d4", "secondary-container": "#95cfff", "background": "#f5faff", "inverse-primary": "#9ecaff", "on-tertiary-fixed-variant": "#00429c", "surface-bright": "#f5faff", "tertiary": "#2b5bb5", "surface-variant": "#d6e5ef"}, "borderRadius": {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"}, "spacing": {"unit-xs": "0.25rem", "margin-desktop": "2rem", "unit-xxl": "3rem", "unit-md": "1rem", "unit-xl": "2rem", "unit-sm": "0.5rem", "unit-lg": "1.5rem", "grid-columns": "12", "gutter": "1.5rem", "margin-mobile": "1rem"}, "fontFamily": {"headline-sm": ["Inter"], "body-lg": ["Inter"], "label-sm": ["Inter"], "headline-xl": ["Inter"], "body-sm": ["Inter"], "label-md": ["Inter"], "headline-md": ["Inter"], "body-md": ["Inter"], "headline-lg": ["Inter"]}, "fontSize": {"headline-sm": ["16px", {"lineHeight": "24px", "fontWeight": "500"}], "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}], "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}], "headline-xl": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600"}], "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}], "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "500"}], "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "500"}], "headline-lg": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}]}}}};</script><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/></head><body class="bg-surface font-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low z-50 flex flex-col py-6"><div class="px-6 mb-8 flex items-center gap-3"><img alt="AuraStay PMS Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCy-4nLs9x0eWhWlJeygTrREO7AU62ATzLr8vhurhnG5y91KZbQCtW540gLO6QLQRDGRGvsEyexwyf4G2_kFekaGmJV4IXF95pLpJg7R50SNx1hKv5n30vZhlnZaLza3JpokwwUcLKQ4KEniGpafPNiCpkoKS713GwlU7HfI-BwPwPsdjgQ-y3bhY_3TvZbzP-RXHp9hZtrRn5kHS0CYBUKbhq0wAnSjbOnM8PCf2jijEKXg_eHkjuLeQ"/><span class="text-headline-sm font-bold text-primary">AuraStay PMS</span></div><nav class="flex-1 px-4 flex flex-col gap-unit-xs" data-active-classes="bg-primary-container text-on-primary-container font-medium"><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">dashboard</span>Status Kamar & Dashboard</a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="front-desk" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">calendar_month</span>Front Desk & Kalender</a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="finance" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">payments</span>Keuangan & Pembayaran</a><a aria-current="page" class="flex items-center px-4 py-3 rounded-xl transition-all bg-primary-container text-on-primary-container font-medium" data-path="rooms-ota" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">hotel</span>Pengaturan Kamar & OTA</a></nav></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-margin-desktop"><div class="flex items-center gap-unit-md"><span class="material-symbols-outlined text-on-surface-variant">search</span><span class="text-body-md text-on-surface-variant">Cari reservasi, tamu, atau nomor kamar...</span></div><div class="flex items-center gap-unit-md"><button class="p-unit-xs rounded-full hover:bg-surface-container-high text-on-surface-variant"><span class="material-symbols-outlined">notifications</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full p-margin-desktop gap-unit-xxl">
+<!-- Top Section: Overview & Metrics -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-unit-md">
+<div>
+<div class="flex items-center gap-unit-xs mb-unit-xs">
+<span class="text-label-sm uppercase tracking-wider text-primary font-bold">Inventory & Channels</span>
+<span class="text-label-sm text-outline">•</span>
+<span class="text-label-sm text-outline">Real-time OTA Sync Active</span>
+</div>
+<h1 class="text-headline-xl text-on-surface">Manajemen Kamar & Channel Manager</h1>
+</div>
+<div class="flex items-center gap-unit-md">
+<button class="bg-surface-container-high text-on-surface hover:bg-surface-dim px-unit-lg py-unit-sm rounded-xl font-medium flex items-center gap-unit-xs transition-all shadow-sm">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+        Sinkronkan OTA Manual
+      </button>
+<button class="bg-primary text-on-primary hover:bg-[#0D47A1] px-unit-lg py-unit-sm rounded-xl font-medium flex items-center gap-unit-xs transition-all shadow-md">
+<span class="material-symbols-outlined text-[18px]">add</span>
+        Tambah Kategori Kamar
+      </button>
+</div>
+</div>
+<!-- Metric Cards Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-unit-lg">
+<div class="bg-surface-container-lowest p-unit-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 bg-[#90CAF9]/20 rounded-full blur-xl"></div>
+<div>
+<div class="flex justify-between items-center mb-unit-md">
+<span class="text-label-md text-on-surface-variant font-medium">Total Kamar Aktif</span>
+<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">hotel</span>
+</div>
+</div>
+<div class="text-headline-lg font-bold text-on-surface">124 Unit</div>
+</div>
+<div class="mt-4 flex items-center gap-unit-xs text-label-sm text-primary">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>98% Siap Huni (Housekeeping OK)</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-unit-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 bg-[#2196F3]/20 rounded-full blur-xl"></div>
+<div>
+<div class="flex justify-between items-center mb-unit-md">
+<span class="text-label-md text-on-surface-variant font-medium">Channel Terhubung</span>
+<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">hub</span>
+</div>
+</div>
+<div class="text-headline-lg font-bold text-on-surface">3 OTA Aktif</div>
+</div>
+<div class="mt-4 flex items-center gap-unit-xs text-label-sm text-primary">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+<span>Latensi Sinkronisasi < 1s</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-unit-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 bg-[#0D47A1]/10 rounded-full blur-xl"></div>
+<div>
+<div class="flex justify-between items-center mb-unit-md">
+<span class="text-label-md text-on-surface-variant font-medium">Rata-rata Harga (ADR)</span>
+<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">payments</span>
+</div>
+</div>
+<div class="text-headline-lg font-bold text-on-surface">Rp 850.000</div>
+</div>
+<div class="mt-4 flex items-center gap-unit-xs text-label-sm text-primary">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+<span>+12% dari bulan lalu</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-unit-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 bg-[#90CAF9]/30 rounded-full blur-xl"></div>
+<div>
+<div class="flex justify-between items-center mb-unit-md">
+<span class="text-label-md text-on-surface-variant font-medium">Layanan Tambahan Aktif</span>
+<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">room_service</span>
+</div>
+</div>
+<div class="text-headline-lg font-bold text-on-surface">8 Layanan</div>
+</div>
+<div class="mt-4 flex items-center gap-unit-xs text-label-sm text-primary">
+<span class="material-symbols-outlined text-[16px]">star</span>
+<span>Populer: Spa & Airport Shuttle</span>
+</div>
+</div>
+</div>
+<!-- Channel Manager Synchronization Panel -->
+<div class="bg-surface-container-lowest p-unit-xl rounded-xl shadow-sm">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-unit-lg gap-unit-md">
+<div>
+<h2 class="text-headline-md font-bold text-on-surface">Status Sinkronisasi Channel Manager</h2>
+<p class="text-body-md text-on-surface-variant">Monitoring ketersediaan tarif dan kamar secara real-time di berbagai platform OTA.</p>
+</div>
+<div class="flex items-center gap-unit-sm bg-[#E3F2FD] px-unit-md py-unit-xs rounded-full">
+<div class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></div>
+<span class="text-label-sm font-medium text-primary">Live Two-Way Sync Active</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-unit-lg">
+<!-- Traveloka -->
+<div class="bg-surface-container-low p-unit-lg rounded-xl flex flex-col justify-between gap-unit-md">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-unit-md">
+<div class="w-12 h-12 rounded-xl bg-[#2196F3]/10 flex items-center justify-center text-primary font-bold text-headline-md">T</div>
+<div>
+<h3 class="text-headline-sm font-bold text-on-surface">Traveloka</h3>
+<span class="text-label-sm text-on-surface-variant">ID: TVLK-99281-ID</span>
+</div>
+</div>
+<span class="bg-primary/10 text-primary px-unit-sm py-unit-xs rounded-full text-label-sm font-medium">Connected</span>
+</div>
+<div class="space-y-2 py-unit-sm">
+<div class="flex justify-between text-body-md">
+<span class="text-on-surface-variant">Mapping Status</span>
+<span class="font-medium text-on-surface">124 / 124 Kamar</span>
+</div>
+<div class="flex justify-between text-body-md">
+<span class="text-on-surface-variant">Last Ping</span>
+<span class="font-medium text-on-surface">2 detik lalu</span>
+</div>
+<div class="flex justify-between text-body-md">
+<span class="text-on-surface-variant">Komisi</span>
+<span class="font-medium text-primary">15%</span>
+</div>
+</div>
+<div class="flex items-center gap-unit-sm pt-unit-sm">
+<button class="flex-1 bg-surface-container-lowest hover:bg-surface-container-high py-unit-sm rounded-xl text-label-md font-medium text-on-surface transition-all">Konfigurasi</button>
+<button class="p-unit-sm bg-surface-container-lowest hover:bg-surface-container-high rounded-xl text-on-surface"><span class="material-symbols-outlined text-[18px]">refresh</span></button>
+</div>
+</div>
+<!-- Agoda -->
+<div class="bg-surface-container-low p-unit-lg rounded-xl flex flex-col justify-between gap-unit-md">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-unit-md">
+<div class="w-12 h-12 rounded-xl bg-[#2196F3]/10 flex items-center justify-center text-primary font-bold text-headline-md">A</div>
+<div>
+<h3 class="text-headline-sm font-bold text-on-surface">Agoda</h3>
+<span class="text-label-sm text-on-surface-variant">ID: AGD-44192-INT</span>
+</div>
+</div>
+<span class="bg-primary/10 text-primary px-unit-sm py-unit-xs rounded-full text-label-sm font-medium">Connected</span>
+</div>
+<div class="space-y-2 py-unit-sm">
+<div class="flex justify-between text-body-md">
+<span class="text-on-surface-variant">Mapping Status</span>
+<span class="font-medium text-on-surface">120 / 124 Kamar</span>
+</div>
+<div class="flex justify-between text-body-md">
+<span class="text-on-surface-variant">Last Ping</span>
+<span class="font-medium text-on-surface">5 detik lalu</span>
+</div>
+<div class="flex justify-between text-body-md">
+<span class="text-on-surface-variant">Komisi</span>
+<span class="font-medium text-primary">18%</span>
+</div>
+</div>
+<div class="flex items-center gap-unit-sm pt-unit-sm">
+<button class="flex-1 bg-surface-container-lowest hover:bg-surface-container-high py-unit-sm rounded-xl text-label-md font-medium text-on-surface transition-all">Konfigurasi</button>
+<button class="p-unit-sm bg-surface-container-lowest hover:bg-surface-container-high rounded-xl text-on-surface"><span class="material-symbols-outlined text-[18px]">refresh</span></button>
+</div>
+</div>
+<!-- Booking.com -->
+<div class="bg-surface-container-low p-unit-lg rounded-xl flex flex-col justify-between gap-unit-md">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-unit-md">
+<div class="w-12 h-12 rounded-xl bg-[#2196F3]/10 flex items-center justify-center text-primary font-bold text-headline-md">B</div>
+<div>
+<h3 class="text-headline-sm font-bold text-on-surface">Booking.com</h3>
+<span class="text-label-sm text-on-surface-variant">ID: BKG-88301-EU</span>
+</div>
+</div>
+<span class="bg-primary/10 text-primary px-unit-sm py-unit-xs rounded-full text-label-sm font-medium">Connected</span>
+</div>
+<div class="space-y-2 py-unit-sm">
+<div class="flex justify-between text-body-md">
+<span class="text-on-surface-variant">Mapping Status</span>
+<span class="font-medium text-on-surface">124 / 124 Kamar</span>
+</div>
+<div class="flex justify-between text-body-md">
+<span class="text-on-surface-variant">Last Ping</span>
+<span class="font-medium text-on-surface">1 detik lalu</span>
+</div>
+<div class="flex justify-between text-body-md">
+<span class="text-on-surface-variant">Komisi</span>
+<span class="font-medium text-primary">15%</span>
+</div>
+</div>
+<div class="flex items-center gap-unit-sm pt-unit-sm">
+<button class="flex-1 bg-surface-container-lowest hover:bg-surface-container-high py-unit-sm rounded-xl text-label-md font-medium text-on-surface transition-all">Konfigurasi</button>
+<button class="p-unit-sm bg-surface-container-lowest hover:bg-surface-container-high rounded-xl text-on-surface"><span class="material-symbols-outlined text-[18px]">refresh</span></button>
+</div>
+</div>
+</div>
+</div>
+<!-- Room Categories & Pricing Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-unit-xl">
+<!-- Categories List (2 cols) -->
+<div class="lg:col-span-2 bg-surface-container-lowest p-unit-xl rounded-xl shadow-sm flex flex-col">
+<div class="flex justify-between items-center mb-unit-lg">
+<div>
+<h2 class="text-headline-md font-bold text-on-surface">Kategori Kamar & Harga Dasar</h2>
+<p class="text-body-md text-on-surface-variant">Atur kapasitas, tarif dasar per malam, dan ketersediaan unit.</p>
+</div>
+<div class="flex gap-unit-sm">
+<span class="material-symbols-outlined text-outline cursor-pointer hover:text-primary">filter_list</span>
+<span class="material-symbols-outlined text-outline cursor-pointer hover:text-primary">sort</span>
+</div>
+</div>
+<div class="space-y-unit-md">
+<!-- Category Item 1 -->
+<div class="bg-surface-container-low p-unit-lg rounded-xl flex flex-col md:flex-row justify-between items-start md:items-center gap-unit-md hover:bg-surface-container transition-all">
+<div class="flex items-center gap-unit-md">
+<div class="w-16 h-16 rounded-xl bg-cover bg-center shrink-0" data-alt="A luxurious modern hotel room interior featuring a plush king-size bed, soft warm lighting, minimalist wooden decor, and large floor-to-ceiling windows overlooking a serene city skyline. Clean pastel blues and crisp whites dominate the palette." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBUhVKiGRkw2BCzW12NsO4BfC-hmyKq7ZN35veLSUDm2O_7-c3IkHwkUzDZXaz2vNYDr2Xzr_GLbUHzOfDEOCI1lNNlWyQJHUPYI5Fegvok7zhelExFAwwj57M3dNMuYnuHWrRBckvmcyELR_faFduISYMCjOE3tJ1MfSUWhMdPDSdMMJnOFfPz0QSYUxEXNDyovblPrpBrtlWtqWLf2MASSVEcNHKrNgi0O7l4aNCmYrB8HFssyX0reg')"></div>
+<div>
+<h3 class="text-headline-sm font-bold text-on-surface">Deluxe King Room</h3>
+<div class="flex items-center gap-unit-sm text-body-sm text-on-surface-variant mt-0.5">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">group</span> 2 Dewasa, 1 Anak</span>
+<span>•</span>
+<span>32 m²</span>
+<span>•</span>
+<span class="text-primary font-medium">45 Unit</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between w-full md:w-auto gap-unit-xl">
+<div class="text-right">
+<div class="text-headline-sm font-bold text-on-surface">Rp 750.000</div>
+<span class="text-label-sm text-on-surface-variant">/ malam (Base Rate)</span>
+</div>
+<div class="flex items-center gap-unit-sm">
+<button class="p-unit-sm bg-surface-container-lowest hover:bg-surface-container-high rounded-xl text-on-surface transition-all"><span class="material-symbols-outlined text-[18px]">edit</span></button>
+<button class="p-unit-sm bg-surface-container-lowest hover:bg-surface-container-high rounded-xl text-on-surface transition-all"><span class="material-symbols-outlined text-[18px]">more_vert</span></button>
+</div>
+</div>
+</div>
+<!-- Category Item 2 -->
+<div class="bg-surface-container-low p-unit-lg rounded-xl flex flex-col md:flex-row justify-between items-start md:items-center gap-unit-md hover:bg-surface-container transition-all">
+<div class="flex items-center gap-unit-md">
+<div class="w-16 h-16 rounded-xl bg-cover bg-center shrink-0" data-alt="An executive suite room in a premier hotel, featuring a separate living lounge area, a spacious king bed, ambient LED ceiling cove lighting, and high-end contemporary furniture in soft neutral tones with blue accents." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA1OEGCo8pQT43pMQhJlvWf8aqAx6XI1lqg2_P3DhipH7tZgqSb7rwcaSb9j2Q-yaUhP0yRT0-TyjR82AS0O6tccUmgeul__NWahd6D4suMliUpxFV73e13a_65vwz3UlqN6IZUIgNx0tzrQGoBv7OwonePGerEv2buVRXb7IPFHzpJUoSJYiMFrT3dOrGHsHHdNPAmD87s7YjviGUR0oTqthBjahsCIK6xF1ESu6BR4Xp-VX9YYfGTVQ')"></div>
+<div>
+<h3 class="text-headline-sm font-bold text-on-surface">Executive Suite</h3>
+<div class="flex items-center gap-unit-sm text-body-sm text-on-surface-variant mt-0.5">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">group</span> 3 Dewasa, 2 Anak</span>
+<span>•</span>
+<span>54 m²</span>
+<span>•</span>
+<span class="text-primary font-medium">18 Unit</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between w-full md:w-auto gap-unit-xl">
+<div class="text-right">
+<div class="text-headline-sm font-bold text-on-surface">Rp 1.450.000</div>
+<span class="text-label-sm text-on-surface-variant">/ malam (Base Rate)</span>
+</div>
+<div class="flex items-center gap-unit-sm">
+<button class="p-unit-sm bg-surface-container-lowest hover:bg-surface-container-high rounded-xl text-on-surface transition-all"><span class="material-symbols-outlined text-[18px]">edit</span></button>
+<button class="p-unit-sm bg-surface-container-lowest hover:bg-surface-container-high rounded-xl text-on-surface transition-all"><span class="material-symbols-outlined text-[18px]">more_vert</span></button>
+</div>
+</div>
+</div>
+<!-- Category Item 3 -->
+<div class="bg-surface-container-low p-unit-lg rounded-xl flex flex-col md:flex-row justify-between items-start md:items-center gap-unit-md hover:bg-surface-container transition-all">
+<div class="flex items-center gap-unit-md">
+<div class="w-16 h-16 rounded-xl bg-cover bg-center shrink-0" data-alt="A cozy twin bedroom in a boutique hotel with two single beds neatly made with pristine white linens, stylish wooden headboards, and soft reading lights casting a warm glow across the tidy space." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCsbxeWvjbJneC76PXphpugFtTfwif5Z-Bpns72x2RU2-EdTtuz6U96kOPYH_eltamLxYBK-iEBDD7qzBbbXjiLe2di4t1_GS335Z1NTDKmXBNj9DroTlnacvwb9wk3MYNGvrX27INJmoCJCcuqRV_qQhqKioiQEXlOVaVVOSugIA6w2BTW3TtkfP1MX-CBu4jBBD_ayWHRZP28OqZ1WHcypPZ6X94eqJy2mObWAwtNa92bni97qZKDpg')"></div>
+<div>
+<h3 class="text-headline-sm font-bold text-on-surface">Superior Twin Room</h3>
+<div class="flex items-center gap-unit-sm text-body-sm text-on-surface-variant mt-0.5">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">group</span> 2 Dewasa</span>
+<span>•</span>
+<span>28 m²</span>
+<span>•</span>
+<span class="text-primary font-medium">61 Unit</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between w-full md:w-auto gap-unit-xl">
+<div class="text-right">
+<div class="text-headline-sm font-bold text-on-surface">Rp 650.000</div>
+<span class="text-label-sm text-on-surface-variant">/ malam (Base Rate)</span>
+</div>
+<div class="flex items-center gap-unit-sm">
+<button class="p-unit-sm bg-surface-container-lowest hover:bg-surface-container-high rounded-xl text-on-surface transition-all"><span class="material-symbols-outlined text-[18px]">edit</span></button>
+<button class="p-unit-sm bg-surface-container-lowest hover:bg-surface-container-high rounded-xl text-on-surface transition-all"><span class="material-symbols-outlined text-[18px]">more_vert</span></button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Pricing & Yield Rule Card -->
+<div class="bg-surface-container-lowest p-unit-xl rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<h2 class="text-headline-md font-bold text-on-surface mb-unit-xs">Yield Management</h2>
+<p class="text-body-md text-on-surface-variant mb-unit-lg">Atur otomatisasi kenaikan harga berdasarkan okupansi hotel.</p>
+<div class="space-y-unit-lg">
+<div class="bg-surface-container-low p-unit-md rounded-xl">
+<div class="flex justify-between items-center mb-unit-xs">
+<span class="text-headline-sm font-bold text-on-surface">High Occupancy (>85%)</span>
+<span class="text-primary font-bold text-headline-sm">+20% Tarif</span>
+</div>
+<p class="text-body-sm text-on-surface-variant">Otomatis menaikkan harga semua channel saat kamar tersisa kurang dari 15%.</p>
+</div>
+<div class="bg-surface-container-low p-unit-md rounded-xl">
+<div class="flex justify-between items-center mb-unit-xs">
+<span class="text-headline-sm font-bold text-on-surface">Weekend Surge (Jum - Sab)</span>
+<span class="text-primary font-bold text-headline-sm">+15% Tarif</span>
+</div>
+<p class="text-body-sm text-on-surface-variant">Penyesuaian tarif akhir pekan terjadwal secara berkala.</p>
+</div>
+<div class="bg-surface-container-low p-unit-md rounded-xl">
+<div class="flex justify-between items-center mb-unit-xs">
+<span class="text-headline-sm font-bold text-on-surface">Last Minute Promo (< 24h)</span>
+<span class="text-error font-bold text-headline-sm">-10% Diskon</span>
+</div>
+<p class="text-body-sm text-on-surface-variant">Meningkatkan konversi okupansi kamar kosong di menit terakhir.</p>
+</div>
+</div>
+</div>
+<button class="w-full mt-unit-xl bg-surface-container-high hover:bg-surface-dim text-on-surface py-unit-md rounded-xl font-medium transition-all text-center">
+        Kelola Aturan Yield Lanjutan
+      </button>
+</div>
+</div>
+<!-- Amenities Management Table -->
+<div class="bg-surface-container-lowest p-unit-xl rounded-xl shadow-sm">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-unit-lg gap-unit-md">
+<div>
+<h2 class="text-headline-md font-bold text-on-surface">Manajemen Fasilitas Kamar</h2>
+<p class="text-body-md text-on-surface-variant">Daftar fasilitas yang terasosiasi pada setiap kategori kamar untuk sinkronisasi OTA.</p>
+</div>
+<div class="flex items-center gap-unit-md">
+<div class="flex items-center bg-surface-container-low px-unit-md py-unit-xs rounded-xl">
+<span class="material-symbols-outlined text-outline text-[18px] mr-2">search</span>
+<input class="bg-transparent border-none outline-none text-body-md text-on-surface placeholder:text-outline w-48" placeholder="Cari fasilitas..." type="text"/>
+</div>
+<button class="bg-primary text-on-primary hover:bg-[#0D47A1] px-unit-lg py-unit-sm rounded-xl font-medium text-label-md transition-all">Tambah Fasilitas</button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant text-label-md">
+<th class="p-unit-md rounded-l-xl">Nama Fasilitas</th>
+<th class="p-unit-md">Kategori Terkait</th>
+<th class="p-unit-md">Status OTA</th>
+<th class="p-unit-md">Kondisi Unit</th>
+<th class="p-unit-md rounded-r-xl text-right">Aksi</th>
+</tr>
+</thead>
+<tbody class="text-body-md text-on-surface divide-y divide-surface-container-low">
+<tr class="hover:bg-surface-container-low/50 transition-all">
+<td class="p-unit-md font-medium flex items-center gap-unit-sm">
+<span class="material-symbols-outlined text-primary">ac_unit</span>
+              Air Conditioner (AC) Inverter
+            </td>
+<td class="p-unit-md text-on-surface-variant">Semua Kategori (124 Unit)</td>
+<td class="p-unit-md"><span class="bg-[#2196F3]/10 text-primary px-unit-sm py-unit-xs rounded-full text-label-sm font-medium">Mapped (Traveloka, Agoda, Booking)</span></td>
+<td class="p-unit-md"><span class="text-primary font-medium">Prima (100%)</span></td>
+<td class="p-unit-md text-right">
+<button class="text-primary hover:underline font-medium text-label-md mr-4">Edit</button>
+<button class="text-error hover:underline font-medium text-label-md">Hapus</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50 transition-all">
+<td class="p-unit-md font-medium flex items-center gap-unit-sm">
+<span class="material-symbols-outlined text-primary">tv</span>
+              Smart TV 50" 4K Netflix Ready
+            </td>
+<td class="p-unit-md text-on-surface-variant">Deluxe King & Executive Suite</td>
+<td class="p-unit-md"><span class="bg-[#2196F3]/10 text-primary px-unit-sm py-unit-xs rounded-full text-label-sm font-medium">Mapped (Traveloka, Agoda)</span></td>
+<td class="p-unit-md"><span class="text-primary font-medium">Prima (98%)</span></td>
+<td class="p-unit-md text-right">
+<button class="text-primary hover:underline font-medium text-label-md mr-4">Edit</button>
+<button class="text-error hover:underline font-medium text-label-md">Hapus</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50 transition-all">
+<td class="p-unit-md font-medium flex items-center gap-unit-sm">
+<span class="material-symbols-outlined text-primary">bathtub</span>
+              Bathtub & Hot Water Jacuzzi
+            </td>
+<td class="p-unit-md text-on-surface-variant">Executive Suite (18 Unit)</td>
+<td class="p-unit-md"><span class="bg-[#2196F3]/10 text-primary px-unit-sm py-unit-xs rounded-full text-label-sm font-medium">Mapped (All Channels)</span></td>
+<td class="p-unit-md"><span class="text-primary font-medium">Prima (100%)</span></td>
+<td class="p-unit-md text-right">
+<button class="text-primary hover:underline font-medium text-label-md mr-4">Edit</button>
+<button class="text-error hover:underline font-medium text-label-md">Hapus</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50 transition-all">
+<td class="p-unit-md font-medium flex items-center gap-unit-sm">
+<span class="material-symbols-outlined text-primary">wifi</span>
+              High-Speed Dedicated Wi-Fi (100 Mbps)
+            </td>
+<td class="p-unit-md text-on-surface-variant">Semua Kategori (124 Unit)</td>
+<td class="p-unit-md"><span class="bg-[#2196F3]/10 text-primary px-unit-sm py-unit-xs rounded-full text-label-sm font-medium">Mapped (All Channels)</span></td>
+<td class="p-unit-md"><span class="text-primary font-medium">Prima (100%)</span></td>
+<td class="p-unit-md text-right">
+<button class="text-primary hover:underline font-medium text-label-md mr-4">Edit</button>
+<button class="text-error hover:underline font-medium text-label-md">Hapus</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Extra Services Management -->
+<div class="bg-surface-container-lowest p-unit-xl rounded-xl shadow-sm">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-unit-lg gap-unit-md">
+<div>
+<h2 class="text-headline-md font-bold text-on-surface">Manajemen Layanan Tambahan (Extra Services)</h2>
+<p class="text-body-md text-on-surface-variant">Layanan opsional yang dapat dipesan tamu saat reservasi atau langsung di front desk.</p>
+</div>
+<button class="bg-primary text-on-primary hover:bg-[#0D47A1] px-unit-lg py-unit-sm rounded-xl font-medium text-label-md transition-all flex items-center gap-unit-xs">
+<span class="material-symbols-outlined text-[18px]">add</span>
+        Tambah Layanan
+      </button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-unit-lg">
+<!-- Service 1 -->
+<div class="bg-surface-container-low p-unit-lg rounded-xl flex flex-col justify-between gap-unit-md">
+<div>
+<div class="flex justify-between items-start mb-unit-md">
+<div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">room_service</span>
+</div>
+<span class="bg-primary/10 text-primary px-unit-sm py-unit-xs rounded-full text-label-sm font-medium">Tersedia 24 Jam</span>
+</div>
+<h3 class="text-headline-sm font-bold text-on-surface mb-1">In-Room Dining (Room Service)</h3>
+<p class="text-body-sm text-on-surface-variant">Aneka menu lokal & internasional diantar langsung ke kamar tamu.</p>
+</div>
+<div class="flex justify-between items-center pt-unit-md">
+<div>
+<span class="text-label-sm text-on-surface-variant">Mulai dari</span>
+<div class="text-headline-sm font-bold text-primary">Rp 45.000</div>
+</div>
+<button class="bg-surface-container-lowest hover:bg-surface-container-high px-unit-md py-unit-sm rounded-xl text-label-md font-medium text-on-surface transition-all">Kelola Menu</button>
+</div>
+</div>
+<!-- Service 2 -->
+<div class="bg-surface-container-low p-unit-lg rounded-xl flex flex-col justify-between gap-unit-md">
+<div>
+<div class="flex justify-between items-start mb-unit-md">
+<div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">directions_car</span>
+</div>
+<span class="bg-primary/10 text-primary px-unit-sm py-unit-xs rounded-full text-label-sm font-medium">Armada Ready</span>
+</div>
+<h3 class="text-headline-sm font-bold text-on-surface mb-1">Vehicle Rental & Airport Shuttle</h3>
+<p class="text-body-sm text-on-surface-variant">Rental mobil harian dengan supir profesional atau antar-jemput bandara.</p>
+</div>
+<div class="flex justify-between items-center pt-unit-md">
+<div>
+<span class="text-label-sm text-on-surface-variant">Tarif / Hari</span>
+<div class="text-headline-sm font-bold text-primary">Rp 350.000</div>
+</div>
+<button class="bg-surface-container-lowest hover:bg-surface-container-high px-unit-md py-unit-sm rounded-xl text-label-md font-medium text-on-surface transition-all">Kelola Armada</button>
+</div>
+</div>
+<!-- Service 3 -->
+<div class="bg-surface-container-low p-unit-lg rounded-xl flex flex-col justify-between gap-unit-md">
+<div>
+<div class="flex justify-between items-start mb-unit-md">
+<div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">spa</span>
+</div>
+<span class="bg-primary/10 text-primary px-unit-sm py-unit-xs rounded-full text-label-sm font-medium">Booking Terjadwal</span>
+</div>
+<h3 class="text-headline-sm font-bold text-on-surface mb-1">Spa & Wellness Packages</h3>
+<p class="text-body-sm text-on-surface-variant">Pijat relaksasi tradisional, aromaterapi, dan perawatan tubuh eksklusif.</p>
+</div>
+<div class="flex justify-between items-center pt-unit-md">
+<div>
+<span class="text-label-sm text-on-surface-variant">Mulai dari</span>
+<div class="text-headline-sm font-bold text-primary">Rp 200.000</div>
+</div>
+<button class="bg-surface-container-lowest hover:bg-surface-container-high px-unit-md py-unit-sm rounded-xl text-label-md font-medium text-on-surface transition-all">Kelola Sesi</button>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

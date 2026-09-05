@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {"colors": {"surface": "#f5faff", "tertiary-container": "#658fed", "on-tertiary-container": "#002763", "inverse-surface": "#24323a", "on-surface-variant": "#404752", "secondary-fixed": "#cbe6ff", "primary-container": "#2196f3", "surface-container-lowest": "#ffffff", "on-primary-fixed": "#001d36", "surface-container-high": "#dbeaf5", "outline": "#707883", "primary-fixed": "#d1e4ff", "on-secondary": "#ffffff", "on-tertiary": "#ffffff", "on-primary-fixed-variant": "#00497d", "inverse-on-surface": "#e4f3fe", "on-tertiary-fixed": "#001945", "on-primary": "#ffffff", "secondary": "#21638d", "on-primary-container": "#002c4f", "on-background": "#0f1d25", "on-secondary-fixed-variant": "#004b71", "surface-container": "#e1f0fb", "surface-dim": "#cddce7", "primary": "#0061a4", "on-error-container": "#93000a", "secondary-fixed-dim": "#93cdfc", "error-container": "#ffdad6", "error": "#ba1a1a", "surface-container-highest": "#d6e5ef", "on-surface": "#0f1d25", "on-error": "#ffffff", "tertiary-fixed-dim": "#b0c6ff", "tertiary-fixed": "#d9e2ff", "surface-tint": "#0061a4", "surface-container-low": "#e9f5ff", "on-secondary-fixed": "#001e30", "primary-fixed-dim": "#9ecaff", "on-secondary-container": "#105982", "outline-variant": "#bfc7d4", "secondary-container": "#95cfff", "background": "#f5faff", "inverse-primary": "#9ecaff", "on-tertiary-fixed-variant": "#00429c", "surface-bright": "#f5faff", "tertiary": "#2b5bb5", "surface-variant": "#d6e5ef"}, "borderRadius": {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"}, "spacing": {"unit-xs": "0.25rem", "margin-desktop": "2rem", "unit-xxl": "3rem", "unit-md": "1rem", "unit-xl": "2rem", "unit-sm": "0.5rem", "unit-lg": "1.5rem", "grid-columns": "12", "gutter": "1.5rem", "margin-mobile": "1rem"}, "fontFamily": {"headline-sm": ["Inter"], "body-lg": ["Inter"], "label-sm": ["Inter"], "headline-xl": ["Inter"], "body-sm": ["Inter"], "label-md": ["Inter"], "headline-md": ["Inter"], "body-md": ["Inter"], "headline-lg": ["Inter"]}, "fontSize": {"headline-sm": ["16px", {"lineHeight": "24px", "fontWeight": "500"}], "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}], "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}], "headline-xl": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600"}], "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}], "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "500"}], "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "500"}], "headline-lg": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}]}}}};</script><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/></head><body class="bg-surface font-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low z-50 flex flex-col py-6"><div class="px-6 mb-8 flex items-center gap-3"><img alt="AuraStay PMS Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCy-4nLs9x0eWhWlJeygTrREO7AU62ATzLr8vhurhnG5y91KZbQCtW540gLO6QLQRDGRGvsEyexwyf4G2_kFekaGmJV4IXF95pLpJg7R50SNx1hKv5n30vZhlnZaLza3JpokwwUcLKQ4KEniGpafPNiCpkoKS713GwlU7HfI-BwPwPsdjgQ-y3bhY_3TvZbzP-RXHp9hZtrRn5kHS0CYBUKbhq0wAnSjbOnM8PCf2jijEKXg_eHkjuLeQ"/><span class="text-headline-sm font-bold text-primary">AuraStay PMS</span></div><nav class="flex-1 px-4 flex flex-col gap-unit-xs" data-active-classes="bg-primary-container text-on-primary-container font-medium"><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">dashboard</span>Status Kamar & Dashboard</a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="front-desk" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">calendar_month</span>Front Desk & Kalender</a><a aria-current="page" class="flex items-center px-4 py-3 rounded-xl transition-all bg-primary-container text-on-primary-container font-medium" data-path="finance" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">payments</span>Keuangan & Pembayaran</a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="rooms-ota" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">hotel</span>Pengaturan Kamar & OTA</a></nav></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-margin-desktop"><div class="flex items-center gap-unit-md"><span class="material-symbols-outlined text-on-surface-variant">search</span><span class="text-body-md text-on-surface-variant">Cari reservasi, tamu, atau nomor kamar...</span></div><div class="flex items-center gap-unit-md"><button class="p-unit-xs rounded-full hover:bg-surface-container-high text-on-surface-variant"><span class="material-symbols-outlined">notifications</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full pb-16">
+<!-- Top Header / Context bar -->
+<div class="px-margin-desktop py-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="text-label-sm uppercase tracking-wider text-secondary font-semibold">Keuangan & Pembayaran</span>
+<span class="text-on-surface-variant">•</span>
+<span class="text-label-sm text-on-surface-variant">Real-time Gateway Sync</span>
+</div>
+<h1 class="text-headline-xl text-on-surface">Manajemen Finansial & Kasir</h1>
+</div>
+<div class="flex items-center gap-3">
+<button class="bg-surface-container-high hover:bg-surface-container-highest text-on-surface px-4 py-2.5 rounded-xl text-label-md transition-all flex items-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">download</span>
+        Unduh Laporan (PDF)
+      </button>
+<button class="bg-primary hover:bg-primary-container text-on-primary px-4 py-2.5 rounded-xl text-label-md transition-all flex items-center gap-2 shadow-md">
+<span class="material-symbols-outlined text-[18px]">add_card</span>
+        Buat Tagihan Baru
+      </button>
+</div>
+</div>
+<!-- Financial Summary Cards -->
+<div class="px-margin-desktop grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter mb-margin-xl">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-all">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 bg-primary/5 rounded-full group-hover:scale-125 transition-transform"></div>
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="text-label-md text-on-surface-variant font-medium">Total Pendapatan (Bulan Ini)</span>
+<span class="p-2 rounded-lg bg-primary-fixed text-on-primary-fixed material-symbols-outlined">payments</span>
+</div>
+<div class="text-headline-lg text-on-surface font-bold">Rp 148.500.000</div>
+</div>
+<div class="flex items-center gap-2 mt-4 text-label-sm text-emerald-700 font-medium">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+<span>+12.4% dari bulan lalu</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-all">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 bg-secondary-fixed/30 rounded-full group-hover:scale-125 transition-transform"></div>
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="text-label-md text-on-surface-variant font-medium">Pending / Piutang Tamu</span>
+<span class="p-2 rounded-lg bg-secondary-fixed text-on-secondary-fixed-variant material-symbols-outlined">pending_actions</span>
+</div>
+<div class="text-headline-lg text-on-surface font-bold">Rp 12.350.000</div>
+</div>
+<div class="flex items-center gap-2 mt-4 text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>8 invoice belum lunas</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-all">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 bg-tertiary-fixed/30 rounded-full group-hover:scale-125 transition-transform"></div>
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="text-label-md text-on-surface-variant font-medium">Rata-rata Pendapatan Harian</span>
+<span class="p-2 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed-variant material-symbols-outlined">analytics</span>
+</div>
+<div class="text-headline-lg text-on-surface font-bold">Rp 4.950.000</div>
+</div>
+<div class="flex items-center gap-2 mt-4 text-label-sm text-emerald-700 font-medium">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+<span>ADR stabil ($85)</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-all">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 bg-surface-container-high rounded-full group-hover:scale-125 transition-transform"></div>
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="text-label-md text-on-surface-variant font-medium">Total Transaksi Gateway</span>
+<span class="p-2 rounded-lg bg-surface-container-high text-on-surface material-symbols-outlined">sync_alt</span>
+</div>
+<div class="text-headline-lg text-on-surface font-bold">342 Berhasil</div>
+</div>
+<div class="flex items-center gap-2 mt-4 text-label-sm text-primary font-medium">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>99.8% Sukses Rate</span>
+</div>
+</div>
+</div>
+<!-- Gateway Status & Analytics Section -->
+<div class="px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-gutter mb-margin-xl">
+<!-- Payment Gateway Status (4 cols) -->
+<div class="lg:col-span-4 bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-headline-sm text-on-surface font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">hub</span>
+            Status Payment Gateway
+          </h2>
+<span class="inline-flex items-center px-2.5 py-1 rounded-full text-label-sm bg-emerald-50 text-emerald-700 font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mr-1.5 animate-pulse"></span>
+            Semua Aktif
+          </span>
+</div>
+<div class="space-y-4">
+<!-- QRIS -->
+<div class="p-4 rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center font-bold text-label-md">QR</div>
+<div>
+<div class="text-headline-sm text-on-surface">QRIS Instant</div>
+<div class="text-body-sm text-on-surface-variant">Midtrans / Doku API</div>
+</div>
+</div>
+<div class="text-right">
+<span class="inline-block px-2.5 py-0.5 rounded text-label-sm bg-primary/10 text-primary font-medium">Connected</span>
+<div class="text-body-sm text-on-surface-variant mt-0.5">Latency: 140ms</div>
+</div>
+</div>
+<!-- Transfer Bank -->
+<div class="p-4 rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-secondary text-on-secondary flex items-center justify-center material-symbols-outlined">account_balance</div>
+<div>
+<div class="text-headline-sm text-on-surface">Virtual Account (BCA/BNI)</div>
+<div class="text-body-sm text-on-surface-variant">Auto-reconciliation</div>
+</div>
+</div>
+<div class="text-right">
+<span class="inline-block px-2.5 py-0.5 rounded text-label-sm bg-primary/10 text-primary font-medium">Connected</span>
+<div class="text-body-sm text-on-surface-variant mt-0.5">Latency: 210ms</div>
+</div>
+</div>
+<!-- Kartu Kredit -->
+<div class="p-4 rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-tertiary text-on-tertiary flex items-center justify-center material-symbols-outlined">credit_card</div>
+<div>
+<div class="text-headline-sm text-on-surface">Kartu Kredit / Debit</div>
+<div class="text-body-sm text-on-surface-variant">Visa / Mastercard 3DS</div>
+</div>
+</div>
+<div class="text-right">
+<span class="inline-block px-2.5 py-0.5 rounded text-label-sm bg-primary/10 text-primary font-medium">Connected</span>
+<div class="text-body-sm text-on-surface-variant mt-0.5">Secure 3DS</div>
+</div>
+</div>
+<!-- E-Wallet -->
+<div class="p-4 rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-on-surface flex items-center justify-center material-symbols-outlined">wallet</div>
+<div>
+<div class="text-headline-sm text-on-surface">E-Wallet (GoPay/OVO)</div>
+<div class="text-body-sm text-on-surface-variant">Direct Deep Link</div>
+</div>
+</div>
+<div class="text-right">
+<span class="inline-block px-2.5 py-0.5 rounded text-label-sm bg-primary/10 text-primary font-medium">Connected</span>
+<div class="text-body-sm text-on-surface-variant mt-0.5">Active</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-surface-container-high flex items-center justify-between">
+<span class="text-body-sm text-on-surface-variant">Webhook Endpoint: OK</span>
+<button class="text-primary text-label-md font-medium hover:underline flex items-center gap-1">
+          Pengaturan API <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Weekly/Monthly Revenue & Occupancy Analytics (8 cols) -->
+<div class="lg:col-span-8 bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between mb-6 gap-2">
+<div>
+<h2 class="text-headline-sm text-on-surface font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">bar_chart</span>
+              Analisis Pendapatan & Okupansi
+            </h2>
+<p class="text-body-sm text-on-surface-variant">Perbandingan performa mingguan hotel AuraStay</p>
+</div>
+<div class="flex items-center bg-surface-container-low p-1 rounded-lg">
+<button class="px-3 py-1.5 bg-surface-container-lowest text-primary text-label-sm font-medium rounded shadow-sm">Mingguan</button>
+<button class="px-3 py-1.5 text-on-surface-variant text-label-sm font-medium hover:text-on-surface">Bulanan</button>
+<button class="px-3 py-1.5 text-on-surface-variant text-label-sm font-medium hover:text-on-surface">Tahunan</button>
+</div>
+</div>
+<!-- Custom Visual Bar/Line Chart Mockup -->
+<div class="h-64 w-full flex items-end justify-between gap-4 px-2 pt-8 pb-4 relative">
+<!-- Background Grid lines -->
+<div class="absolute inset-x-0 top-0 border-b border-surface-container-high"></div>
+<div class="absolute inset-x-0 top-1/4 border-b border-surface-container-high"></div>
+<div class="absolute inset-x-0 top-2/4 border-b border-surface-container-high"></div>
+<div class="absolute inset-x-0 top-3/4 border-b border-surface-container-high"></div>
+<!-- Day 1: Sen -->
+<div class="flex-1 flex flex-col items-center gap-2 z-10 h-full justify-end group">
+<div class="w-full max-w-[40px] bg-primary-container rounded-t-lg transition-all group-hover:bg-primary relative" style="height: 65%;">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-inverse-surface text-inverse-on-surface text-[10px] px-1.5 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">Rp 18.2jt</div>
+</div>
+<span class="text-body-sm text-on-surface-variant">Sen</span>
+</div>
+<!-- Day 2: Sel -->
+<div class="flex-1 flex flex-col items-center gap-2 z-10 h-full justify-end group">
+<div class="w-full max-w-[40px] bg-primary-container rounded-t-lg transition-all group-hover:bg-primary relative" style="height: 50%;">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-inverse-surface text-inverse-on-surface text-[10px] px-1.5 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">Rp 14.5jt</div>
+</div>
+<span class="text-body-sm text-on-surface-variant">Sel</span>
+</div>
+<!-- Day 3: Rab -->
+<div class="flex-1 flex flex-col items-center gap-2 z-10 h-full justify-end group">
+<div class="w-full max-w-[40px] bg-primary-container rounded-t-lg transition-all group-hover:bg-primary relative" style="height: 70%;">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-inverse-surface text-inverse-on-surface text-[10px] px-1.5 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">Rp 21.0jt</div>
+</div>
+<span class="text-body-sm text-on-surface-variant">Rab</span>
+</div>
+<!-- Day 4: Kam -->
+<div class="flex-1 flex flex-col items-center gap-2 z-10 h-full justify-end group">
+<div class="w-full max-w-[40px] bg-primary-container rounded-t-lg transition-all group-hover:bg-primary relative" style="height: 60%;">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-inverse-surface text-inverse-on-surface text-[10px] px-1.5 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">Rp 17.8jt</div>
+</div>
+<span class="text-body-sm text-on-surface-variant">Kam</span>
+</div>
+<!-- Day 5: Jum -->
+<div class="flex-1 flex flex-col items-center gap-2 z-10 h-full justify-end group">
+<div class="w-full max-w-[40px] bg-primary rounded-t-lg transition-all relative" style="height: 85%;">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-inverse-surface text-inverse-on-surface text-[10px] px-1.5 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">Rp 28.5jt</div>
+</div>
+<span class="text-body-sm text-on-surface-variant font-medium text-primary">Jum</span>
+</div>
+<!-- Day 6: Sab -->
+<div class="flex-1 flex flex-col items-center gap-2 z-10 h-full justify-end group">
+<div class="w-full max-w-[40px] bg-primary rounded-t-lg transition-all relative" style="height: 95%;">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-inverse-surface text-inverse-on-surface text-[10px] px-1.5 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">Rp 34.2jt</div>
+</div>
+<span class="text-body-sm text-on-surface-variant font-medium text-primary">Sab</span>
+</div>
+<!-- Day 7: Min -->
+<div class="flex-1 flex flex-col items-center gap-2 z-10 h-full justify-end group">
+<div class="w-full max-w-[40px] bg-primary rounded-t-lg transition-all relative" style="height: 80%;">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-inverse-surface text-inverse-on-surface text-[10px] px-1.5 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">Rp 26.0jt</div>
+</div>
+<span class="text-body-sm text-on-surface-variant font-medium text-primary">Min</span>
+</div>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-surface-container-high flex flex-wrap items-center justify-between gap-4">
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-primary"></div>
+<span class="text-body-sm text-on-surface-variant">Pendapatan Kamar (Room Revenue)</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-secondary-fixed-dim"></div>
+<span class="text-body-sm text-on-surface-variant">F&B & Layanan Lain</span>
+</div>
+</div>
+<div class="text-label-md font-semibold text-primary">
+          Okupansi Minggu Ini: 84.5%
+        </div>
+</div>
+</div>
+</div>
+<!-- Automated Invoice & Billing Generator List -->
+<div class="px-margin-desktop">
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-6">
+<!-- Table Header / Toolbar -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+<div>
+<h2 class="text-headline-sm text-on-surface font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">receipt_long</span>
+            Daftar Invoice & Generator Otomatis
+          </h2>
+<p class="text-body-sm text-on-surface-variant">Kelola penagihan tamu, riwayat pembayaran, dan pengiriman invoice otomatis via WhatsApp/Email</p>
+</div>
+<div class="flex items-center gap-3">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-on-surface-variant text-[18px]">search</span>
+<input class="pl-9 pr-4 py-2 bg-surface-container-low rounded-xl text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/20 w-64" placeholder="Cari nama tamu, no. kamar..." type="text"/>
+</div>
+<select class="bg-surface-container-low px-4 py-2 rounded-xl text-body-md text-on-surface focus:outline-none">
+<option>Semua Status</option>
+<option>Lunas (Paid)</option>
+<option>Pending</option>
+<option>Jatuh Tempo</option>
+</select>
+</div>
+</div>
+<!-- Table Content -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant text-label-md">
+<th class="py-3 px-4 rounded-l-xl font-medium">No. Invoice & Tamu</th>
+<th class="py-3 px-4 font-medium">Kamar</th>
+<th class="py-3 px-4 font-medium">Metode Bayar</th>
+<th class="py-3 px-4 font-medium">Total Tagihan</th>
+<th class="py-3 px-4 font-medium">Status</th>
+<th class="py-3 px-4 font-medium">Tanggal</th>
+<th class="py-3 px-4 rounded-r-xl font-medium text-right">Aksi</th>
+</tr>
+</thead>
+<tbody class="text-body-md text-on-surface divide-y divide-surface-container-high">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-4 px-4">
+<div class="font-semibold text-primary">INV-2023-8821</div>
+<div class="text-body-sm text-on-surface-variant">Budi Santoso (Corporate)</div>
+</td>
+<td class="py-4 px-4">
+<span class="px-2.5 py-1 rounded-lg bg-surface-container font-medium text-label-sm">Deluxe #302</span>
+</td>
+<td class="py-4 px-4 flex items-center gap-2 pt-5">
+<span class="material-symbols-outlined text-[18px] text-primary">qr_code_2</span>
+<span>QRIS (Midtrans)</span>
+</td>
+<td class="py-4 px-4 font-semibold">Rp 2.450.000</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full text-label-sm bg-emerald-50 text-emerald-700 font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mr-1.5"></span>
+                  Lunas
+                </span>
+</td>
+<td class="py-4 px-4 text-body-sm text-on-surface-variant">24 Okt 2023, 14:32</td>
+<td class="py-4 px-4 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="p-1.5 rounded-lg hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-all" title="Kirim WhatsApp">
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-all" title="Cetak PDF">
+<span class="material-symbols-outlined text-[18px]">print</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-all" title="Detail Invoice">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-4 px-4">
+<div class="font-semibold text-primary">INV-2023-8822</div>
+<div class="text-body-sm text-on-surface-variant">Sarah Jenkins (OTA - Agoda)</div>
+</td>
+<td class="py-4 px-4">
+<span class="px-2.5 py-1 rounded-lg bg-surface-container font-medium text-label-sm">Suite #501</span>
+</td>
+<td class="py-4 px-4 flex items-center gap-2 pt-5">
+<span class="material-symbols-outlined text-[18px] text-secondary">credit_card</span>
+<span>Virtual Card</span>
+</td>
+<td class="py-4 px-4 font-semibold">Rp 4.100.000</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full text-label-sm bg-emerald-50 text-emerald-700 font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mr-1.5"></span>
+                  Lunas
+                </span>
+</td>
+<td class="py-4 px-4 text-body-sm text-on-surface-variant">24 Okt 2023, 12:15</td>
+<td class="py-4 px-4 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="p-1.5 rounded-lg hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-all" title="Kirim WhatsApp">
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-all" title="Cetak PDF">
+<span class="material-symbols-outlined text-[18px]">print</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-all" title="Detail Invoice">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-4 px-4">
+<div class="font-semibold text-primary">INV-2023-8823</div>
+<div class="text-body-sm text-on-surface-variant">Ahmad Fauzi (Walk-in)</div>
+</td>
+<td class="py-4 px-4">
+<span class="px-2.5 py-1 rounded-lg bg-surface-container font-medium text-label-sm">Superior #104</span>
+</td>
+<td class="py-4 px-4 flex items-center gap-2 pt-5">
+<span class="material-symbols-outlined text-[18px] text-tertiary">account_balance</span>
+<span>Transfer BCA VA</span>
+</td>
+<td class="py-4 px-4 font-semibold">Rp 1.250.000</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full text-label-sm bg-amber-50 text-amber-700 font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500 mr-1.5"></span>
+                  Pending / Menunggu
+                </span>
+</td>
+<td class="py-4 px-4 text-body-sm text-on-surface-variant">24 Okt 2023, 10:05</td>
+<td class="py-4 px-4 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="p-1.5 rounded-lg hover:bg-surface-container-high text-amber-600 hover:text-amber-700 transition-all" title="Kirim WhatsApp Reminder">
+<span class="material-symbols-outlined text-[18px]">outgoing_mail</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-all" title="Cetak PDF">
+<span class="material-symbols-outlined text-[18px]">print</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-all" title="Detail Invoice">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-4 px-4">
+<div class="font-semibold text-primary">INV-2023-8824</div>
+<div class="text-body-sm text-on-surface-variant">Jessica Iskandar (Direct)</div>
+</td>
+<td class="py-4 px-4">
+<span class="px-2.5 py-1 rounded-lg bg-surface-container font-medium text-label-sm">Deluxe #308</span>
+</td>
+<td class="py-4 px-4 flex items-center gap-2 pt-5">
+<span class="material-symbols-outlined text-[18px] text-primary">wallet</span>
+<span>GoPay E-Wallet</span>
+</td>
+<td class="py-4 px-4 font-semibold">Rp 1.900.000</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full text-label-sm bg-emerald-50 text-emerald-700 font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mr-1.5"></span>
+                  Lunas
+                </span>
+</td>
+<td class="py-4 px-4 text-body-sm text-on-surface-variant">24 Okt 2023, 09:40</td>
+<td class="py-4 px-4 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="p-1.5 rounded-lg hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-all" title="Kirim WhatsApp">
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-all" title="Cetak PDF">
+<span class="material-symbols-outlined text-[18px]">print</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-all" title="Detail Invoice">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination / Footer -->
+<div class="mt-6 flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-surface-container-high">
+<div class="text-body-sm text-on-surface-variant">
+          Menampilkan <span class="font-medium text-on-surface">1-4</span> dari <span class="font-medium text-on-surface">342</span> total invoice
+        </div>
+<div class="flex items-center gap-1">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant text-label-md hover:bg-surface-container-high transition-all disabled:opacity-50" disabled="">Sebelumnya</button>
+<button class="px-3 py-1.5 rounded-lg bg-primary text-on-primary text-label-md">1</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface text-label-md hover:bg-surface-container-high transition-all">2</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface text-label-md hover:bg-surface-container-high transition-all">3</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface text-label-md hover:bg-surface-container-high transition-all">Berikutnya</button>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>
