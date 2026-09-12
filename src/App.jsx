@@ -8,6 +8,7 @@ import QuickActions from './components/QuickActions'
 import TambahKamar from './pages/TambahKamar'
 import FrontDeskKalender from './pages/FrontDeskKalender'
 import PengaturanKamarOTA from './pages/PengaturanKamarOTA'
+import KeuanganPembayaran from './pages/KeuanganPembayaran'
 
 export default function App() {
   return (
@@ -87,6 +88,7 @@ export default function App() {
             <Route path="/tambah-kamar" element={<TambahKamar />} />
             <Route path="/front-desk" element={<FrontDeskKalender />} />
             <Route path="/rooms-ota" element={<PengaturanKamarOTA />} />
+            <Route path="/finance" element={<KeuanganPembayaran />} />
           </Routes>
         </main>
       </div>
