@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/almasfarabi/manajemen-hotel#readme",
   "dependencies": {
+    "@supabase/supabase-js": "^2.116.0",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "react-router-dom": "^7.18.3"

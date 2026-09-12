@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { useRooms } from '../hooks/useRooms'
 
 const amenities = [
   { id: 'ac', label: 'Air Conditioner (AC) Inverter', desc: 'Pendingin ruangan hemat energi dengan kontrol digital.', icon: 'ac_unit', checked: true },
@@ -25,9 +27,89 @@ export default function TambahKamar() {
     tarif: '750.000',
     penyesuaian: 15,
   })
+  const [saving, setSaving] = useState(false)
+  const [message, setMessage] = useState(null)
+  const [selectedAmenities, setSelectedAmenities] = useState(
+    amenities.filter((a) => a.checked).map((a) => a.id)
+  )
+  const [activeChannels, setActiveChannels] = useState(
+    channels.filter((ch) => ch.active).map((ch) => ch.name)
+  )
+  const { addRoom } = useRooms()
+  const navigate = useNavigate()
 
   const update = (field) => (e) => {
     setForm((prev) => ({ ...prev, [field]: e.target.value }))
+  }
+
+  const toggleAmenity = (id) => {
+    setSelectedAmenities((prev) =>
+      prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
+    )
+  }
+
+  const toggleChannel = (name) => {
+    setActiveChannels((prev) =>
+      prev.includes(name) ? prev.filter((item) => item !== name) : [...prev, name]
+    )
+  }
+
+  const formatTarif = (value) => {
+    const numeric = value.replace(/[^\d]/g, '')
+    if (!numeric) return ''
+    return numeric.replace(/\B(?=(\d{3})+(?!\d))/g, '.')
+  }
+
+  const handleTarifChange = (e) => {
+    const formatted = formatTarif(e.target.value)
+    setForm((prev) => ({ ...prev, tarif: formatted }))
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    setSaving(true)
+    setMessage(null)
+
+    const selectedAmenityNames = amenities
+      .filter((a) => selectedAmenities.includes(a.id))
+      .map((a) => a.label)
+
+    const selectedChannelObjects = channels
+      .filter((ch) => activeChannels.includes(ch.name))
+      .map((ch) => ({
+        name: ch.name,
+        id: ch.id,
+        mapped: ch.mapped,
+        active: true,
+      }))
+
+    const roomData = {
+      nomor_kamar: form.nomor,
+      lantai: parseInt(form.lantai, 10),
+      tipe: form.tipe,
+      kapasitas_dewasa: parseInt(form.dewasa, 10),
+      kapasitas_anak: parseInt(form.anak, 10),
+      luas: form.luas ? parseFloat(form.luas) : null,
+      tarif_dasar: parseInt(form.tarif.replace(/\./g, ''), 10) || 0,
+      penyesuaian_weekend: parseFloat(form.penyesuaian) || 0,
+      fasilitas: selectedAmenityNames,
+      channel_manager: selectedChannelObjects,
+      foto: [],
+      status: 'available',
+    }
+
+    const { error } = await addRoom(roomData)
+
+    if (error) {
+      setMessage({ type: 'error', text: `Gagal menyimpan: ${error}` })
+    } else {
+      setMessage({ type: 'success', text: 'Kamar berhasil disimpan!' })
+      setTimeout(() => {
+        navigate('/')
+      }, 1500)
+    }
+
+    setSaving(false)
   }
 
   return (
@@ -37,7 +119,7 @@ export default function TambahKamar() {
           <button
             type="button"
             className="p-2 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface transition-all flex items-center justify-center"
-            onClick={() => window.history.back()}
+            onClick={() => navigate(-1)}
           >
             <span className="material-symbols-outlined text-[20px]">arrow_back</span>
           </button>
@@ -50,14 +132,20 @@ export default function TambahKamar() {
           <button className="px-4 py-2 rounded-xl bg-surface-container text-on-surface hover:bg-surface-container-high transition-all text-label-md" type="button">
             Batal
           </button>
-          <button className="px-5 py-2 rounded-xl bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container transition-all shadow-sm text-label-md flex items-center gap-2" type="submit" form="add-room-form">
-            <span className="material-symbols-outlined text-[18px]">save</span>
-            Simpan Data Kamar
+          <button className="px-5 py-2 rounded-xl bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container transition-all shadow-sm text-label-md flex items-center gap-2" type="submit" form="add-room-form" disabled={saving}>
+            <span className="material-symbols-outlined text-[18px]">{saving ? 'hourglass_top' : 'save'}</span>
+            {saving ? 'Menyimpan...' : 'Simpan Data Kamar'}
           </button>
         </div>
       </div>
 
-      <form className="flex flex-col gap-unit-xl" id="add-room-form">
+      {message && (
+        <div className={`p-4 rounded-xl ${message.type === 'error' ? 'bg-error-container text-on-error-container' : 'bg-emerald-50 text-emerald-700'}`}>
+          {message.text}
+        </div>
+      )}
+
+      <form className="flex flex-col gap-unit-xl" id="add-room-form" onSubmit={handleSubmit}>
         <section className="bg-surface-container-lowest rounded-xl p-unit-lg shadow-sm">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-10 h-10 rounded-xl bg-primary-container/20 flex items-center justify-center text-primary">
@@ -95,6 +183,7 @@ export default function TambahKamar() {
                   className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-surface text-on-surface focus:outline-none focus:ring-2 focus:ring-primary transition-all text-body-md appearance-none"
                   value={form.lantai}
                   onChange={update('lantai')}
+                  required
                 >
                   <option value="">Pilih Lantai</option>
                   <option value="1">Lantai 1</option>
@@ -118,6 +207,7 @@ export default function TambahKamar() {
                   className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-surface text-on-surface focus:outline-none focus:ring-2 focus:ring-primary transition-all text-body-md appearance-none"
                   value={form.tipe}
                   onChange={update('tipe')}
+                  required
                 >
                   <option value="">Pilih Tipe Kamar</option>
                   <option value="deluxe">Deluxe King Room</option>
@@ -143,6 +233,7 @@ export default function TambahKamar() {
                   type="number"
                   value={form.dewasa}
                   onChange={update('dewasa')}
+                  required
                 />
               </div>
             </div>
@@ -199,7 +290,8 @@ export default function TambahKamar() {
                   className="w-full pl-12 pr-4 py-2.5 rounded-xl bg-surface text-on-surface focus:outline-none focus:ring-2 focus:ring-primary transition-all text-body-md font-semibold"
                   type="text"
                   value={form.tarif}
-                  onChange={update('tarif')}
+                  onChange={handleTarifChange}
+                  required
                 />
               </div>
               <span className="text-body-sm text-on-surface-variant">Belum termasuk pajak 10% dan servis 5%.</span>
@@ -237,9 +329,10 @@ export default function TambahKamar() {
             {amenities.map((a) => (
               <label key={a.id} className="flex items-start gap-3 p-4 rounded-xl bg-surface hover:bg-surface-container-high transition-all cursor-pointer">
                 <input
-                  defaultChecked={a.checked}
+                  checked={selectedAmenities.includes(a.id)}
                   className="mt-0.5 w-4 h-4 rounded text-primary focus:ring-primary accent-primary"
                   type="checkbox"
+                  onChange={() => toggleAmenity(a.id)}
                 />
                 <div className="flex flex-col">
                   <span className="text-label-md text-on-surface font-medium flex items-center gap-2">
@@ -279,7 +372,7 @@ export default function TambahKamar() {
                 <div className="flex items-center gap-4">
                   <span className="px-2.5 py-1 rounded-full bg-surface-container-high text-on-primary-container text-body-sm font-medium">{ch.mapped}</span>
                   <label className="relative inline-flex items-center cursor-pointer">
-                    <input defaultChecked={ch.active} className="sr-only peer" type="checkbox" />
+                    <input checked={activeChannels.includes(ch.name)} className="sr-only peer" type="checkbox" onChange={() => toggleChannel(ch.name)} />
                     <div className="w-11 h-6 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
                   </label>
                 </div>
@@ -349,9 +442,9 @@ export default function TambahKamar() {
           <button className="px-5 py-2.5 rounded-xl bg-surface-container text-on-surface hover:bg-surface-container-high transition-all text-label-md" type="button">
             Batal
           </button>
-          <button className="px-6 py-2.5 rounded-xl bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container transition-all shadow-md text-label-md flex items-center gap-2" type="submit">
-            <span className="material-symbols-outlined text-[18px]">save</span>
-            Simpan Data Kamar
+          <button className="px-6 py-2.5 rounded-xl bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container transition-all shadow-md text-label-md flex items-center gap-2" type="submit" disabled={saving}>
+            <span className="material-symbols-outlined text-[18px]">{saving ? 'hourglass_top' : 'save'}</span>
+            {saving ? 'Menyimpan...' : 'Simpan Data Kamar'}
           </button>
         </div>
       </form>
