@@ -7,6 +7,7 @@ import HousekeepingPanel from './components/HousekeepingPanel'
 import QuickActions from './components/QuickActions'
 import TambahKamar from './pages/TambahKamar'
 import FrontDeskKalender from './pages/FrontDeskKalender'
+import PengaturanKamarOTA from './pages/PengaturanKamarOTA'
 
 export default function App() {
   return (
@@ -85,6 +86,7 @@ export default function App() {
             />
             <Route path="/tambah-kamar" element={<TambahKamar />} />
             <Route path="/front-desk" element={<FrontDeskKalender />} />
+            <Route path="/rooms-ota" element={<PengaturanKamarOTA />} />
           </Routes>
         </main>
       </div>
