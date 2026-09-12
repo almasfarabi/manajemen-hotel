@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Sidebar from './components/Sidebar'
 import Header from './components/Header'
@@ -11,11 +12,19 @@ import PengaturanKamarOTA from './pages/PengaturanKamarOTA'
 import KeuanganPembayaran from './pages/KeuanganPembayaran'
 
 export default function App() {
+  const [sidebarOpen, setSidebarOpen] = useState(false)
+
   return (
     <div className="bg-surface font-body-md text-on-surface">
-      <Sidebar />
-      <div className="pl-64">
-        <Header />
+      <Sidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+      {sidebarOpen && (
+        <div
+          className="fixed inset-0 bg-inverse-surface/40 z-40 lg:hidden"
+          onClick={() => setSidebarOpen(false)}
+        />
+      )}
+      <div className="lg:pl-64">
+        <Header onOpenSidebar={() => setSidebarOpen(true)} />
         <main className="relative pt-16 bg-surface min-h-screen">
           <Routes>
             <Route
@@ -23,17 +32,17 @@ export default function App() {
               element={
                 <div className="flex flex-col w-full p-margin-desktop gap-unit-xl">
                   <div className="flex flex-col gap-unit-md">
-                    <div className="flex justify-between items-end">
+                    <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
                       <div>
                         <span className="text-label-sm uppercase tracking-wider text-primary font-bold">AuraStay PMS Core</span>
                         <h1 className="font-headline-xl text-on-surface">Status Kamar & Dashboard Real-time</h1>
                       </div>
-                      <div className="flex items-center gap-unit-md">
-                        <button className="flex items-center gap-2 px-4 py-2 bg-surface-container-high rounded-xl text-on-surface hover:bg-surface-container-highest transition-all text-label-md">
+                      <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-unit-md">
+                        <button className="flex items-center justify-center gap-2 px-4 py-2 bg-surface-container-high rounded-xl text-on-surface hover:bg-surface-container-highest transition-all text-label-md">
                           <span className="material-symbols-outlined text-[18px]">refresh</span>
                           <span>Sinkronisasi OTA</span>
                         </button>
-                        <button className="flex items-center gap-2 px-4 py-2 bg-primary text-on-primary rounded-xl hover:bg-primary-container transition-all text-label-md shadow-sm">
+                        <button className="flex items-center justify-center gap-2 px-4 py-2 bg-primary text-on-primary rounded-xl hover:bg-primary-container transition-all text-label-md shadow-sm">
                           <span className="material-symbols-outlined text-[18px]">add</span>
                           <span>Check-in Cepat</span>
                         </button>
@@ -44,12 +53,12 @@ export default function App() {
                   <div className="grid grid-cols-1 lg:grid-cols-12 gap-unit-lg">
                     <div className="lg:col-span-8 flex flex-col gap-unit-md">
                       <div className="bg-surface-container-lowest p-unit-lg rounded-xl shadow-sm flex flex-col gap-unit-md">
-                        <div className="flex flex-wrap items-center justify-between gap-4 pb-4">
+                        <div className="flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center justify-between gap-4 pb-4">
                           <div className="flex items-center gap-2">
                             <h2 className="font-headline-md text-on-surface">Matriks Kamar</h2>
                             <span className="px-2.5 py-0.5 bg-surface-container-high text-on-surface-variant rounded-full text-label-sm font-medium">Lantai 1 - 5</span>
                           </div>
-                          <div className="flex items-center gap-2">
+                          <div className="flex flex-wrap items-center gap-2">
                             <button className="px-3 py-1.5 bg-primary text-on-primary rounded-lg text-label-sm font-medium">Semua</button>
                             <button className="px-3 py-1.5 bg-surface-container-high text-on-surface-variant hover:bg-surface-container-highest rounded-lg text-label-sm font-medium transition-all">Deluxe</button>
                             <button className="px-3 py-1.5 bg-surface-container-high text-on-surface-variant hover:bg-surface-container-highest rounded-lg text-label-sm font-medium transition-all">Suite</button>
